@@ -1,0 +1,18 @@
+I"o<h4 id="norm">Norm</h4>
+
+<p>A function $f: \mathbf{R}^{n} \rightarrow \mathbf{R}$ with $\mathbf{d o m} f=\mathbf{R}^{n}$ is called a <strong>norm</strong></p>
+
+\[\|x\|_{\mathrm{symb}}\]
+
+<p>if</p>
+
+<ul>
+  <li>$f$ is nonnegative: $f(x) \geq 0$ for all $x \in \mathbf{R}^{n}$</li>
+  <li>$f$ is definite: $f(x)=0$ only if $x=0$</li>
+  <li>$f$ is homogeneous: $f(t x)=|t|f(x)$, for all $x \in \mathbf{R}^{n}$ and $t \in \mathbf{R}$</li>
+  <li>$f$ satisfies the triangle inequality: $f(x+y) \leq f(x)+f(y)$, for all $x, y \in \mathbf{R}^{n}$</li>
+</ul>
+
+<p>A norm is a generalization of the absolute value on $\mathbf{R}$.</p>
+
+:ET

@@ -1,0 +1,99 @@
+I"�<h4 id="partial-pivoting">partial pivoting</h4>
+
+<p>Small pivot brings large round off error</p>
+
+<p>Choose the largest number in row $k$ or below. Exchange its row with row $k$.</p>
+
+<p>partial pivoting exchange rows, complete pivoting exchange both rows and columns.</p>
+
+<h4 id="elimination">Elimination</h4>
+
+<ol>
+  <li>Elimination requires $\frac{1}{2}n^3$ multiply-subtracts, compared to $n^3$ for $A^{-1}$•</li>
+  <li>If $A$ is banded so are $L$ and $U$: by comparison $A^{- 1}$ is full of nonzeros.</li>
+</ol>
+
+<h4 id="band-matrices">Band Matrices</h4>
+
+<p><img src="https://s2.loli.net/2022/07/18/hOSbycfuv9R8iPa.png" alt="image-20220718095810967" /></p>
+
+<p>A band matrix has $a_{ij} = 0$ when $|i - j |&gt; w$.</p>
+
+<p>Elimination</p>
+
+<p><img src="https://s2.loli.net/2022/07/18/KsfXLBn7SeQPpwo.png" alt="image-20220718101042191" /></p>
+
+<h4 id="matrix-norm">Matrix norm</h4>
+
+<p><img src="https://s2.loli.net/2022/07/18/xsLMAj1WR2u8vOP.png" alt="image-20220718104927245" /></p>
+
+<h4 id="condition-number">condition number</h4>
+
+\[c=\frac{\|A\|}{|]A^{-1}\|}\]
+
+<p><img src="https://s2.loli.net/2022/07/18/LP2Eikgt954NMj3.png" alt="image-20220718110318999" /></p>
+
+<h4 id="iterative-problem">iterative problem</h4>
+
+\[A=S-T\]
+
+<p><img src="https://s2.loli.net/2022/07/18/AoDGSdczriCVqpt.png" alt="image-20220718110948796" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/18/GCTFLWle712wSYr.png" alt="image-20220718111007344" /></p>
+
+<h5 id="residual">residual</h5>
+
+\[r_k = b - Ax_k\]
+
+<h4 id="preconditioner-s">preconditioner $S$</h4>
+
+<p>diagonal or trianular part of $A$, many zeros.</p>
+
+<p><img src="https://s2.loli.net/2022/07/18/zKRGyE859oMQ7Da.png" alt="image-20220718120006552" /></p>
+
+<h5 id="error">error</h5>
+
+\[e_k=x-x_k\]
+
+<p><img src="https://s2.loli.net/2022/07/18/H5Vmy1SufwrctIe.png" alt="image-20220718115425104" /></p>
+
+<h5 id="spectral-radius">spectral radius</h5>
+
+\[B=S^{-1}T\]
+
+<p><img src="https://s2.loli.net/2022/07/18/EhLVO1xkQe2rYW8.png" alt="image-20220718121100579" /></p>
+
+<hr />
+
+<p><img src="https://s2.loli.net/2022/07/18/TStPc3LBNHn8Quh.png" alt="image-20220718124135376" /></p>
+
+<h4 id="jacobis-method">Jacobi’s method</h4>
+
+<p><img src="https://s2.loli.net/2022/07/18/toQYkgBeU4S8ZCc.png" alt="image-20220718124105813" /></p>
+
+<p>Keep the diagonal of $A$ on the left side (this is $S$). Move the off-diagonal part of $A$ to the right side (this is $T$).</p>
+
+<p>Jacobi’s method works well when the main diagonal of $A$ is large compared to the off-diagonal part. (diagonal dominate)</p>
+
+<h4 id="gauss-seidel-method">Gauss-Seidel method</h4>
+
+<p><img src="https://s2.loli.net/2022/07/18/tbNBwkjZfqUMVHO.png" alt="image-20220718124118545" /></p>
+
+<p>Keeps the whole lower triangular part of $A$ as $S$.</p>
+
+<p>no $u_k$, save storage of data.</p>
+
+<p>Twice faster than Jacobi.</p>
+
+\[\rho_\text{GS}=(\rho_\text{J})^2 \ \text{when A is positive definite tridiagonal}\]
+
+<h4 id="successive-overrelaxation-method-sor">successive overrelaxation method (SOR)</h4>
+
+<p>Gauss-Seidel, with an adjustable number $\omega$</p>
+
+\[\omega Ax=\omega b\]
+
+\[T=S-\omega A\]
+
+<p><img src="https://s2.loli.net/2022/07/18/r54hlEFNfmbp2zv.png" alt="image-20220718124640205" /></p>
+:ET

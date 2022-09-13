@@ -1,0 +1,181 @@
+I"´<p>Reference: Strang, Gilbert, et al. <em>Introduction to linear algebra</em>. Vol. 3. Wellesley, MA: Wellesley-Cambridge Press, 1993.</p>
+
+<p><img src="https://live.staticflickr.com/65535/52213295678_dfd4ecdd08_o.jpg" alt="linearalgebra5_Front" /></p>
+
+<hr />
+
+<h1 id="the-matrix-alphabet">The matrix alphabet</h1>
+
+\[\begin{array}{llcl}
+\boldsymbol{A} &amp; \text { Any Matrix } &amp; \boldsymbol{P} &amp; \text { Permutation Matrix } \\
+\boldsymbol{B} &amp; \text { Basis Matrix } &amp; \boldsymbol{P} &amp; \text { Projection Matrix } \\
+\boldsymbol{C} &amp; \text { Cofactor Matrix } &amp; \boldsymbol{Q} &amp; \text { Orthogonal Matrix } \\
+\boldsymbol{D} &amp; \text { Diagonal Matrix } &amp; \boldsymbol{R} &amp; \text { Upper Triangular Matrix } \\
+\boldsymbol{E} &amp; \text { Elimination Matrix } &amp; \boldsymbol{R} &amp; \text { Reduced Echelon Matrix } \\
+\boldsymbol{F} &amp; \text { Fourier Matrix } &amp; \boldsymbol{S} &amp; \text { Symmetric Matrix } \\
+\boldsymbol{H} &amp; \text { Hadamard Matrix } &amp; \boldsymbol{T} &amp; \text { Linear Transformation } \\
+\boldsymbol{I} &amp; \text { Identity Matrix } &amp; \boldsymbol{U} &amp; \text { Upper Triangular Matrix } \\
+\boldsymbol{J} &amp; \text { Jordan Matrix } &amp; \boldsymbol{U} &amp; \text { Left Singular Vectors } \\
+\boldsymbol{K} &amp; \text { Stiffness Matrix } &amp; \boldsymbol{V} &amp; \text { Right Singular Vectors } \\
+\boldsymbol{L} &amp; \text { Lower Triangular Matrix } &amp; \boldsymbol{X} &amp; \text { Eigenvector Matrix } \\
+\boldsymbol{M} &amp; \text { Markov Matrix } &amp; \boldsymbol{\Lambda} &amp; \text { Eigenvalue Matrix } \\
+\boldsymbol{N} &amp; \text { Nullspace Matrix } &amp; \boldsymbol{\Sigma} &amp; \text { Singular Value Matrix }
+\end{array}\]
+
+<h4 id="minor-mathbfm_ij">Minor $\mathbf{M}_{ij}$</h4>
+<p>Operational Definition:</p>
+
+\[\mathbf{M}_{2,3}=\operatorname{det}\left[\begin{array}{ccc}
+    1 &amp; 4 &amp; \square \\
+    \square &amp; \square &amp; \square \\
+    -1 &amp; 9 &amp; \square
+    \end{array}\right]=\operatorname{det}\left[\begin{array}{cc}
+    1 &amp; 4 \\
+    -1 &amp; 9
+    \end{array}\right]=9-(-4)=13\]
+
+<h4 id="adjugate-matrix-operatornameadjmathbfa-or-mathbfa">Adjugate Matrix $\operatorname{adj}(\mathbf{A})$ or $\mathbf{A}^*$</h4>
+
+\[\mathbf{C}_{ij}=(-1)^{ij}\mathbf{M}_{ij}\]
+
+\[\operatorname{adj}(\mathbf{A})=\mathbf{C^T}\]
+
+<h4 id="determinant-operatornamedetmathbfa-ormathbfa">Determinant $\operatorname{det}(\mathbf{A})$ or$|\mathbf{A}|$</h4>
+<h4 id="inverse-matrix-mathbfa-1">Inverse Matrix $\mathbf{A}^{-1}$</h4>
+
+\[\mathbf{A}^{-1}=\frac{\operatorname{adj}(\mathbf{A})}{\operatorname{det}(\mathbf{A})}\]
+
+<h5 id="2times2-matrix">$2\times2$ Matrix</h5>
+
+\[\left[\begin{array}{cc}
+    a &amp; b \\ 
+    c &amp; d
+    \end{array}\right]^{-1}=
+\left[\begin{array}{cc}
+    d &amp; -b \\ 
+    -c &amp; a
+    \end{array}\right]\]
+
+<h2 id="calculation-rules">Calculation Rules</h2>
+
+<h4 id="product">Product</h4>
+
+<h5 id="hadamard-product--schur-product--element-wise-product--entrywise-product">Hadamard Product / Schur Product / Element-wise Product / Entrywise Product</h5>
+
+\[(A\circ B)_{ij}=(A\odot B)_{ij}=(A)_{ij}(B)_{ij}\]
+
+<h5 id="dot-product--scalar-product">Dot Product / Scalar Product</h5>
+
+\[A\cdot B\]
+
+<h5 id="matrix-multiplication">Matrix Multiplication</h5>
+
+\[AB\]
+
+<h5 id="cross-product">Cross Product</h5>
+
+\[A\times B\]
+
+<h1 id="vector-calculus">Vector Calculus</h1>
+
+<h4 id="scalar-fields">Scalar Fields</h4>
+
+<h4 id="vector-fields">Vector Fields</h4>
+
+<h4 id="vectors-and-pseudovectors">Vectors and Pseudovectors</h4>
+
+<h4 id="vector-addition-2-vectors-longrightarrow-1-vector">Vector Addition: 2 vectors $\longrightarrow$ 1 vector</h4>
+
+\[\textbf{v}_1+\textbf{v}_2\]
+
+<h4 id="scalar-multiplication-1-scalar--1-vector-longrightarrow-1-vector">Scalar Multiplication: 1 scalar $+$ 1 vector $\longrightarrow$ 1 vector</h4>
+
+\[\alpha\textbf{v}_2\]
+
+<h4 id="dot-product-2-vector-longrightarrow-1-scalar">Dot Product: 2 vector $\longrightarrow$ 1 scalar</h4>
+
+\[\textbf{v}_1\cdot\textbf{v}_2\]
+
+<h4 id="cross-product-2-vectors-in-mathbbr3longrightarrow-1-pseudovector">Cross Product: 2 vectors in $\mathbb{R}^3\longrightarrow$ 1 (pseudo)vector</h4>
+
+\[\textbf{v}_1\times\textbf{v}_2\]
+
+<h2 id="operators">Operators</h2>
+
+<h4 id="gradient-scalar-fields-longrightarrow-vector-fields">Gradient: scalar fields $\longrightarrow$ vector fields</h4>
+
+\[\mathrm{grad}(f)=\nabla f\]
+
+<h4 id="divergence-vector-fields-longrightarrow-scalar-fields">Divergence: vector fields $\longrightarrow$ scalar fields</h4>
+
+\[\mathrm{div}(\textbf{F})=\nabla\cdot\textbf{F}\]
+
+<h4 id="curl-vector-fields-longrightarrow-vector-fields">Curl: vector fields $\longrightarrow$ vector fields</h4>
+
+\[\mathrm{curl}(\textbf{F})=\nabla\times\textbf{F}\]
+
+<h4 id="laplacian-vector-fields-longrightarrow-vector-fields">Laplacian: vector fields $\longrightarrow$ vector fields</h4>
+
+\[\Delta f=\nabla^2f=\nabla\cdot\nabla f\]
+
+<h4 id="vector-laplacian-vector-fields-longrightarrow-vector-fields">Vector Laplacian: vector fields $\longrightarrow$ vector fields</h4>
+
+\[\Delta \textbf{F}=\nabla^2\textbf{F}=\nabla(\nabla\cdot\textbf{F})-\nabla\times(\nabla\times\textbf{F})\]
+
+<h2 id="integral-theorems">Integral Theorems</h2>
+
+<h4 id="gradient-theorem">Gradient Theorem</h4>
+
+\[\int_{L\subset\mathbb{R}^n}\nabla\phi\cdot\mathrm{d}r=\phi(q)-\phi(p) \ for \ L=L[p\rightarrow q]\]
+
+<h4 id="divergence-theorem">Divergence Theorem</h4>
+
+\[\int...\int_{V\subset\mathbb{R}^n}(\nabla\cdot\textbf{F})\mathrm{d}V=\oint...\oint_{\partial V}F\cdot\mathrm{d}S\]
+
+<h4 id="curl-kelvin-stokes-theorem">Curl (Kelvin-Stokes) Theorem</h4>
+
+\[\iint_{\Sigma\subset\mathbb{R}^3}(\nabla\times\textbf{F})\mathrm{d}\Sigma=\oint_{\partial\Sigma}\textbf{F}\mathrm{d}r\]
+
+<h4 id="greens-theorem-divergencecurl-theorem-in-2d">Greenâ€™s Theorem (Divergence/Curl Theorem in 2D)</h4>
+
+\[\iint_{A\subset\mathbb{R}^2}-\left(\frac{\partial L}{\partial y}\right)\mathrm{d}A=\oint_{\partial A}(L\mathrm{d}x+M\mathrm{d}y)\]
+
+<h4 id="jacobian-matrix-and-determinant">Jacobian Matrix and Determinant</h4>
+
+\[\textbf{f}:\mathbb{R}^n\rightarrow\mathbb{R}^m\]
+
+\[\textbf{J}_{ij}=\frac{\partial f_i}{\partial x_j}\]
+
+\[\textbf{J}=\nabla ^\mathrm{T}\textbf{f}\]
+
+\[\mathbf{J}=\left[\begin{array}{ccc}
+\frac{\partial \mathbf{f}}{\partial x_{1}} &amp; \cdots &amp; \frac{\partial \mathbf{f}}{\partial x_{n}}
+\end{array}\right]=\left[\begin{array}{c}
+\nabla^{\mathrm{T}} f_{1} \\
+\vdots \\
+\nabla^{\mathrm{T}} f_{m}
+\end{array}\right]=\left[\begin{array}{ccc}
+\frac{\partial f_{1}}{\partial x_{1}} &amp; \cdots &amp; \frac{\partial f_{1}}{\partial x_{n}} \\
+\vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial f_{m}}{\partial x_{1}} &amp; \cdots &amp; \frac{\partial f_{m}}{\partial x_{n}}
+\end{array}\right]_{m \times n}\]
+
+<p>If $m=n$, Jacobian matrix has its determinant $|\textbf{J}|$.</p>
+
+<p>Its value represents the transformation ratio of $\textbf{f}$.</p>
+
+<h4 id="hessian-matrix">Hessian Matrix</h4>
+
+\[f:\mathbb{R}^n\rightarrow\mathbb{R}\]
+
+\[(\textbf{H}_{f})_{ij}=\frac{\partial^2 f}{\partial x_i\partial x_j}\]
+
+\[\mathbf{H}_{f}=\left[\begin{array}{cccc}
+\frac{\partial^{2} f}{\partial x_{1}^{2}} &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{1} \partial x_{n}} \\
+\frac{\partial^{2} f}{\partial x_{2} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{2}^{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{2} \partial x_{n}} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial^{2} f}{\partial x_{n} \partial x_{1}} &amp; \frac{\partial^{2} f}{\partial x_{n} \partial x_{2}} &amp; \cdots &amp; \frac{\partial^{2} f}{\partial x_{n}^{2}}
+\end{array}\right]_{n \times n}\]
+
+\[\textbf{H}(f(\textbf{x}))=\textbf{J}(\nabla f(\textbf{x}))=\nabla ^\mathrm{T}(\nabla f(\textbf{x}))\]
+:ET

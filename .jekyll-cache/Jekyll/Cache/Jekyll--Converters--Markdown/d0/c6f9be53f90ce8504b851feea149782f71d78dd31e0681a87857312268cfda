@@ -1,0 +1,50 @@
+I"<h1 id="complex-numbers">Complex Numbers</h1>
+
+\[z=\mathcal{Re}\{z\}+j\mathcal{Im}\{z\}\]
+
+<hr />
+
+<h4 id="eulers-formula">Euler’s Formula</h4>
+
+\[\mathrm{e}^{j\theta}=\cos\theta+j\sin\theta\]
+
+<hr />
+
+<h4 id="modulus--magnitudes">Modulus / Magnitudes</h4>
+
+\[r=|z|=\sqrt{|\mathcal{Re}\{z\}|^2+|\mathcal{Im}\{z\}|^2}\]
+
+<h5 id="properties">Properties</h5>
+
+\[|r\mathrm{e}^{j\theta}|=|r||\cos\theta+j\sin\theta|=\sqrt{|r|^2}\sqrt{|\cos\theta|^2+|\sin\theta|^2}=r\]
+
+\[|\mathrm{e}^{j\theta}|=|\cos\theta+j\sin\theta|=\sqrt{|\cos\theta|^2+|\sin\theta|^2}=1\]
+
+<hr />
+
+<h4 id="argument--phase">Argument / Phase</h4>
+
+\[\theta=\arg (r\mathrm{e}^{j\theta})\]
+
+<h5 id="properties-1">Properties</h5>
+
+\[\arg (ab)=\arg a+\arg b\]
+
+\[z_1z_2=r_1\mathrm{e}^{j\theta_1}r_2\mathrm{e}^{j\theta_2}=r_1r_2r\mathrm{e}^{j(\theta_1+\theta_2)}\]
+
+\[z_1+z_2=r_1\mathrm{e}^{j\theta_1}+r_2\mathrm{e}^{j\theta_2}\]
+
+<hr />
+
+<h4 id="complex-conjugate">Complex conjugate</h4>
+
+\[z^*=\mathcal{Re}\{z\}-j\mathcal{Im}\{z\}\]
+
+<h5 id="properties-2">Properties</h5>
+
+\[(\mathrm{e}^{j\theta})^*=\mathrm{e}^{-j\theta}\]
+
+\[\mathcal{Re}\{z\}=\frac{z+z^*}{2} \ \ \ \mathcal{Im}\{z\}=\frac{z-z^*}{2j}\]
+
+\[\cos\theta=\frac{\mathrm{e}^{j\theta}+\mathrm{e}^{-j\theta}}{2} \ \ \ \sin\theta=\frac{\mathrm{e}^{j\theta}-\mathrm{e}^{-j\theta}}{2j}\]
+:ET

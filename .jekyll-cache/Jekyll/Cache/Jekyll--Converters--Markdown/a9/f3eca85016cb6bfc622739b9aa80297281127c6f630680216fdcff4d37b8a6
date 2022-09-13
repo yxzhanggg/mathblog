@@ -1,0 +1,167 @@
+I")<h4 id="linear-transformation">linear transformation</h4>
+
+\[T(c \boldsymbol{v}+d \boldsymbol{w}) \quad \text { must equal } \quad c T(\boldsymbol{v})+d T(\boldsymbol{w})\]
+
+<p>Shift is not linear:</p>
+
+\[\boldsymbol{v}+\boldsymbol{w}+\boldsymbol{u}_{0} \quad \text { is not } T(\boldsymbol{v})+T(\boldsymbol{w})=\left(\boldsymbol{v}+\boldsymbol{u}_{0}\right)+\left(\boldsymbol{w}+\boldsymbol{u}_{0}\right)\]
+
+<p>Equally spaced points go to equally spaced points.</p>
+
+<h4 id="affine">affine</h4>
+
+<p>linear-plus-shift transformation $T(v)=A v+u_{0}$.</p>
+
+<p>Straight lines stay straight although $T$ is not linear.</p>
+
+<p>affine provides the ability to move things.</p>
+
+<h4 id="linearity">Linearity</h4>
+
+\[\boldsymbol{u} =c_{1} \boldsymbol{v}_{1}+c_{2} \boldsymbol{v}_{2}+\cdots+c_{n} \boldsymbol{v}_{n}\]
+
+<p>must transform to:</p>
+
+\[T(\boldsymbol{u}) =c_{1} T\left(\boldsymbol{v}_{1}\right)+c_{2} T\left(\boldsymbol{v}_{2}\right)+\cdots+c_{n} T\left(\boldsymbol{v}_{n}\right)\]
+
+<p>Suppose you know $T(v)$ for all vectors $v_{1}, \ldots, v_{n}$ in a basis Then you know $T(u)$ for every vector $u$ in the space.</p>
+
+<h4 id="calculus">Calculus</h4>
+
+\[T=\text { derivative}\]
+
+\[T^{+}=\text {integral}\]
+
+<h4 id="fundamental-theorem-of-calculus">Fundamental Theorem of Calculus</h4>
+
+<p>Integration is the (pseudo)inverse of differentiation.</p>
+
+<p>The derivative of a constant function is zero. That zero is on the diagonal of $A^{+} A$. Calculus wouldn’t be calculus without that 1 -dimensional nullspace of $T=d / d x$.</p>
+
+<h4 id="range">range</h4>
+
+<p>column space</p>
+
+<p>Set of all outputs $T(v)$.</p>
+
+<h4 id="kernel">kernel</h4>
+
+<p>nullspace</p>
+
+<p>Set of all inputs for which $T(\boldsymbol{v})=0$.</p>
+
+<h4 id="trigonometry-the-double-angle-rule">Trigonometry (the double angle rule)</h4>
+
+\[A^2=\left[\begin{array}{rr}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{array}\right]\left[\begin{array}{rr}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{array}\right]=\left[\begin{array}{cc}
+\cos ^{2} \theta-\sin ^{2} \theta &amp; -2 \sin \theta \cos \theta \\
+2 \sin \theta \cos \theta &amp; \cos ^{2} \theta-\sin ^{2} \theta
+\end{array}\right]=\left[\begin{array}{rr}
+\cos 2 \theta &amp; -\sin 2 \theta \\
+\sin 2 \theta &amp; \cos 2 \theta
+\end{array}\right]\]
+
+<h4 id="rotate-back">Rotate back</h4>
+
+\[A B=\left[\begin{array}{rr}
+\cos \theta &amp; \sin \theta \\
+-\sin \theta &amp; \cos \theta
+\end{array}\right]\left[\begin{array}{rr}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{array}\right]=\left[\begin{array}{cc}
+\cos ^{2} \theta+\sin ^{2} \theta &amp; 0 \\
+0 &amp; \cos ^{2} \theta+\sin ^{2} \theta
+\end{array}\right]=I\]
+
+<h4 id="isometric">isometric</h4>
+
+<p>$C=Q_{1}^{-1} A Q_{2}$ is isometric to $A$ if $Q_{1}$ and $Q_{2}$ are orthogonal.</p>
+
+<hr />
+
+<p>$A_{\text {new }}=B^{-1} A B$ in the new basis of $b$ ‘s is <strong>similar</strong> to $A$ in the standard basis:</p>
+
+<p><img src="https://live.staticflickr.com/65535/52214232370_7625ed365c_o.png" alt="Screen Shot 2022-07-13 at 4.34.38 PM" /></p>
+
+<p>The best input-output bases are eigenvectors and/or singular vectors of $A$.</p>
+
+\[B^{-1} A B=\Lambda= \text{eigenvalues}\]
+
+\[B_{\text {out }}^{-1} A B_{\text {in }}=\Sigma=$ \text{singular values}\]
+
+<hr />
+
+<h1 id="good-basis">Good Basis</h1>
+
+<h4 id="x-1-a-xtext--eigenvalues-in--lambda">\(X^{-1} A X=\text { eigenvalues in } \Lambda\)</h4>
+
+<h4 id="u-1-a-vtext--diagonal--sigma">\(U^{-1} A V=\text { diagonal } \Sigma\)</h4>
+
+<h4 id="jordan-form">Jordan form</h4>
+
+<p>independent eigenvectors $s$, constructed $n -s$ additional “ generalized” eigenvectors</p>
+
+\[B^{-1} A B=\text { Jordan form } J (B_{\text {in }}=B_{\text {out }}=\text { generalized eigenvectors of } A)\]
+
+<p><img src="https://live.staticflickr.com/65535/52213838558_433a634d80_o.png" alt="Screen Shot 2022-07-13 at 5.11.11 PM" /></p>
+
+<p>the generalized eigenvector is tied to the previous eigenvector.</p>
+
+<p><img src="https://s2.loli.net/2022/07/14/SMqkZ7dbYnomAPJ.png" alt="image-20220714121459482" /></p>
+
+<p>Like Laplace transform is a generalization of Fourier transform, Jordan form is a generalization of finding eigenbases.</p>
+
+<p>The rank of $J$ (and $A$) will be the total number of 1’s. The maximum rank is $n/2$.</p>
+
+<h4 id="b_text-in-b_text-out-text--forier-matrix--f">\(B_{\text {in }}=B_{\text {out }}=\text { Forier matrix } F\)</h4>
+
+<p>Discrete Fourier Transform $Fx$</p>
+
+<p><img src="https://s2.loli.net/2022/07/14/Jr2moDCKOH1wVg9.png" alt="image-20220714150905250" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/14/RlaxTEJA5BNu6Zd.png" alt="image-20220714143703521" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/14/JOK2sfSbhIt8qw9.png" alt="image-20220714150851321" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/14/tDRo2Mljnk9bdiQ.png" alt="image-20220714155939186" /></p>
+
+<h4 id="basis-for-function-space">basis for function space</h4>
+
+<p><img src="https://s2.loli.net/2022/07/14/Lm7EuC1vFSAJef2.png" alt="image-20220714162229250" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/14/GBbWvNnzPOX6mAR.png" alt="image-20220714164605894" /></p>
+
+<h4 id="orthogonality-between-even-and-odd-functions">Orthogonality between even and odd functions</h4>
+
+<p><img src="https://s2.loli.net/2022/07/14/gy3xcB1wYmARnrI.png" alt="image-20220714162423956" /></p>
+
+<h4 id="fourier-basis">Fourier basis</h4>
+
+\[1, \sin x, \cos x, \sin 2x, \cos 2x, ...\]
+
+<p>linear algebra in function space, projecting vector $b$ onto the line through $a$.</p>
+
+\[a_i=\boldsymbol{b}^\mathrm{T}\boldsymbol{a}/\boldsymbol{a}^\mathrm{T}\boldsymbol{a}\]
+
+<h4 id="legendre-basis">Legendre basis</h4>
+
+\[1,x, x^2-\frac{1}{3}, x^3-\frac{3}{5}x,\ldots\]
+
+<p>is the result of Grant-Schmidt: orthogonalize the power $1, x, x^2$</p>
+
+<h4 id="chebyshev-basis">Chebyshev basis</h4>
+
+\[1,x,2x^2-1,4x^3-3x,\ldots\]
+
+<p>set $x=\cos \theta$</p>
+
+<p><img src="https://s2.loli.net/2022/07/14/yO5uqnQtxlhpfDZ.png" alt="image-20220714163933245" /></p>
+
+\[n^\text{th} \, \text{degree Chebyshev polynomial}\quad\mathbf{T}_n(x)\stackrel{\mathcal{F}}\longrightarrow \mathbf{T}_n(\cos \theta) =\cos n\theta\]
+:ET

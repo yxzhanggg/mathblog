@@ -1,0 +1,332 @@
+I"1<<h4 id="orthogonal-vectors">Orthogonal vectors</h4>
+
+\[\boldsymbol{v}^{\mathrm{T}} \boldsymbol{w}=0 \quad \text { and } \quad\|\boldsymbol{v}\|^{2}+\|\boldsymbol{w}\|^{2}=\|\boldsymbol{v}+\boldsymbol{w}\|^{2}\]
+
+<h4 id="orthogonal">Orthogonal</h4>
+
+<p>Definition: Two subspaces $\boldsymbol{V}$ and $\boldsymbol{W}$ of a vector space are <strong>orthogonal</strong> if every vector $\boldsymbol{v}$ in $V$ is perpendicular to every vector $w$ in $W$.</p>
+
+<p>The unit vectors $q_{1}, \ldots, q_{n}$ are <strong>orthonormal</strong> if</p>
+
+\[\boldsymbol{q}_{i}^{\mathrm{T}} \boldsymbol{q}_{j}=\left\{\begin{array}{lll}
+0 &amp; \text { when } i \neq j &amp; \text { (orthogonal vectors) } \\
+1 &amp; \text { when } i=j &amp; \left(\text { unit vectors: }\left\|\boldsymbol{q}_{i}\right\|=1\right)
+\end{array}\right.\]
+
+<p>A matrix with <strong>unit</strong> orthonormal columns is assigned the special letter $Q$.</p>
+
+\[\boldsymbol{Q}^{\mathrm{T}} \boldsymbol{Q}=\left[\begin{array}{c}-\boldsymbol{q}_{1}^{\mathrm{T}}- \\ -\boldsymbol{q}_{2}^{\mathrm{T}}- \\ -\boldsymbol{q}_{n}^{\mathrm{T}}-\end{array}\right]\left[\begin{array}{ccc}1 &amp; \mid &amp; 1 \\ \boldsymbol{q}_{1} &amp; \boldsymbol{q}_{2} &amp; \boldsymbol{q}_{n} \\ 1 &amp; \mid &amp; 1\end{array}\right]=\left[\begin{array}{cccc}1 &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; 1 &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 0 &amp; 0 &amp; \cdots &amp; 1\end{array}\right]=\boldsymbol{I}\]
+
+\[\boldsymbol{v}^{\mathrm{T}} \boldsymbol{w}=0 \text { for all } v \text { in } \boldsymbol{V} \text { and all } \boldsymbol{w} \text { in } W\]
+
+<p><img src="https://live.staticflickr.com/65535/52192216197_e291ca7e32_o.png" alt="Screen Shot 2022-07-04 at 4.54.11 PM" /></p>
+
+<p><img src="https://live.staticflickr.com/65535/52192387322_eaa6507e54_o.png" alt="Screen Shot 2022-07-04 at 6.07.08 PM" /></p>
+
+<p><img src="https://live.staticflickr.com/65535/52193422546_ff2f26b778_o.png" alt="Screen Shot 2022-07-04 at 6.18.39 PM" /></p>
+
+<h4 id="orthogonal-complements">Orthogonal Complements</h4>
+
+<p>Definition:The orthogonal complement of a subspace $V$ contains every vector that is perpendicular to $V$. This orthogonal subspace is denoted by $V^{\perp}$ (pronounced “ $V$ perp”).</p>
+
+<h4 id="orthogonal-matrix">Orthogonal matrix</h4>
+
+<p>When $Q$ is square, $Q^{\mathrm{T}} Q=I$ means that $Q^{\mathrm{T}}=Q^{-1}$ : transpose $=$ inverse, the square matrix is called <strong>orthogonal matrix</strong>.</p>
+
+<p>Does multiplication by any orthogonal matrix $Q$ - <strong>lengths</strong> and <strong>angles</strong> don’t change.</p>
+
+<h5 id="rotation">Rotation</h5>
+
+<p>$Q$ rotates every vector in the plane by the angle $\theta$ :</p>
+
+<p>$Q=\left[\begin{array}{rr}\cos \theta &amp; -\sin \theta \ \sin \theta &amp; \cos \theta\end{array}\right] \quad$ and $\quad Q^{\mathrm{T}}=Q^{-1}=\left[\begin{array}{rr}\cos \theta &amp; \sin \theta \ -\sin \theta &amp; \cos \theta\end{array}\right]$</p>
+
+<h5 id="permutation"><img src="https://live.staticflickr.com/65535/52202440925_0f72d0ca30_o.png" alt="Screen Shot 2022-07-08 at 11.59.46 AM" />Permutation</h5>
+
+<p>Every permutation matrix is an orthogonal matrix.</p>
+
+<h5 id="reflection">Reflection</h5>
+
+<p>If $\boldsymbol{u}$ is any unit vector, set $Q=I-2 u u^{\mathrm{T}}$</p>
+
+<p>$Q^{\mathrm{T}}=I-2 \boldsymbol{u} \boldsymbol{u}^{\mathrm{T}}=Q \quad$ and $\quad Q^{\mathrm{T}} Q=I-4 \boldsymbol{u} \boldsymbol{u}^{\mathrm{T}}+4 \boldsymbol{u} \boldsymbol{u}^{\mathrm{T}} \boldsymbol{u} \boldsymbol{u}^{\mathrm{T}}=I$</p>
+
+<p><img src="https://live.staticflickr.com/65535/52202450280_9a9863135b_o.png" alt="Screen Shot 2022-07-08 at 12.07.19 PM" /></p>
+
+<hr />
+
+<h1 id="fundamental-theorem-of-linear-algebra-pt2">Fundamental Theorem of Linear Algebra. Pt.2</h1>
+
+<p>$\boldsymbol{N}(\boldsymbol{A})$ is the orthogonal complement of the row space $\boldsymbol{C}\left(A^{\mathrm{T}}\right)$ (in $\mathbf{R}^{n}$ ).</p>
+
+<p>$\boldsymbol{N}\left(A^{\mathrm{T}}\right)$ is the orthogonal complement of the column space $C(A)\left(\right.$ in $\left.\mathbf{R}^{m}\right) .$</p>
+
+<p><img src="https://live.staticflickr.com/65535/52194314620_5b60203db5_o.png" alt="Screen Shot 2022-07-04 at 9.16.06 PM" /></p>
+
+<p><strong>After the transformation, the information of nullspace is annihilated. For example after the transformation of first differentiation, the information of position has dissappeared, then second differentiation crash the information of velocity, third accelaration…</strong></p>
+
+<p>And if we do integration, we need to add the constant C, that integration process is the back-transformation of differentiation, which bring back to the general null space - C position, C velocity, C acceleration…</p>
+
+<p>Remember the particular solution of integration, it is the information brought back by the transformation feature of the system from the “b”; the general solution is the information of nullspace brought back by the annihilation feature of the system from 0!</p>
+
+<hr />
+
+<h1 id="projection">Projection</h1>
+
+<h4 id="projection-matrix-p">Projection Matrix $P$</h4>
+
+\[\boldsymbol{p}_{1}=P_{1} \boldsymbol{b}=\left[\begin{array}{lll}
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array}\right]\left[\begin{array}{l}
+x \\
+y \\
+z
+\end{array}\right]=\left[\begin{array}{l}
+\mathbf{0} \\
+\mathbf{0} \\
+\boldsymbol{z}
+\end{array}\right] \quad \boldsymbol{p}_{2}=P_{2} \boldsymbol{b}=\left[\begin{array}{lll}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0
+\end{array}\right]\left[\begin{array}{l}
+x \\
+y \\
+z
+\end{array}\right]=\left[\begin{array}{l}
+\boldsymbol{x} \\
+\boldsymbol{y} \\
+\mathbf{0}
+\end{array}\right]\]
+
+<p><img src="https://live.staticflickr.com/65535/52197523148_22dcc3fa63_o.png" alt="Screen Shot 2022-07-06 at 10.51.51 AM" /></p>
+
+<p>The vectors give $\boldsymbol{p}<em>{1}+\boldsymbol{p}</em>{2}=\boldsymbol{b}$.</p>
+
+<p>The matrices give $P_{1}+P_{2}=I$.</p>
+
+<p>The vector $b$ is being split into the projection $p$ and the error $e = b- p$.</p>
+
+\[P \boldsymbol{b}=\boldsymbol{p}\]
+
+<p>Projection again is still the projection:</p>
+
+\[P^{2}=P\]
+
+\[P^{\mathrm{T}}=P\]
+
+<h4 id="error-e">Error $e$</h4>
+
+<p>The distance from $b$ to the the subspace $C(A)$ is $||e||$</p>
+
+\[e=b-\widehat{x} a\]
+
+<h4 id="bestclosest-choice-widehatx">best/closest choice $\widehat{x}$</h4>
+
+\[\begin{gathered}
+\boldsymbol{a}_{1}^{\mathrm{T}}(\boldsymbol{b}-A \widehat{\boldsymbol{x}})=0 \\
+\vdots \\
+\boldsymbol{a}_{n}^{\mathrm{T}}(\boldsymbol{b}-A \widehat{\boldsymbol{x}})=0
+\end{gathered} \quad \text { or } \quad\left[\begin{array}{c}
+-\boldsymbol{a}_{1}^{\mathrm{T}}- \\
+\vdots \\
+-\boldsymbol{a}_{n}^{\mathrm{T}}-
+\end{array}\right][\boldsymbol{b}-A \widehat{\boldsymbol{x}}]=\left[\begin{array}{l}
+0
+\end{array}\right]\]
+
+<p>Rewrite above (orthogonality):</p>
+
+\[A^{\mathrm{T}}(\boldsymbol{b}-A \widehat{\boldsymbol{x}})=\mathbf{0}\]
+
+\[A^{\mathrm{T}} A \widehat{\boldsymbol{x}}=A^{\mathrm{T}} \boldsymbol{b}\]
+
+<p><img src="https://live.staticflickr.com/65535/52197560778_a0c086264e_o.png" alt="Screen Shot 2022-07-06 at 11.21.18 AM" /></p>
+
+<p>When $P$ projects onto one subspace, $I - P$ projects onto the perpendicular subspace.</p>
+
+<h4 id="3-steps-to-find-p">3 steps to find $P$</h4>
+
+<ol>
+  <li>
+    <p>Find the vector $\widehat{x}$</p>
+  </li>
+  <li>Find the projection $p=A \widehat{x}$</li>
+  <li>Find the projection matrix $P$</li>
+</ol>
+
+<p><img src="https://live.staticflickr.com/65535/52198611826_429549c22f_o.png" alt="Screen Shot 2022-07-06 at 9.16.26 PM" /></p>
+
+<p><img src="https://live.staticflickr.com/65535/52198893479_c7fa4329f6_o.png" alt="Screen Shot 2022-07-06 at 9.19.41 PM" /></p>
+
+<h1 id="least-squares-approximations">Least Squares Approximations</h1>
+
+<p>When the length of $\boldsymbol{e}$ is as small as possible, $\widehat{\boldsymbol{x}}$ is $a$ least squares solution.</p>
+
+<h4 id="minimizing-the-error">Minimizing the error</h4>
+
+<ol>
+  <li>
+    <p>By geometry</p>
+
+    <p>The smallest possible error is $e = b - p$, perpendicular to the columns space of $A$.</p>
+  </li>
+  <li>
+    <p>By algebra</p>
+
+\[A \boldsymbol{x}=\boldsymbol{b}=\boldsymbol{p}+\boldsymbol{e} \text { is impossible } \quad A \widehat{\boldsymbol{x}}=\boldsymbol{p} \text { is solvable } \quad \widehat{\boldsymbol{x}} \text { is }\left(A^{\mathrm{T}} A\right)^{-1} A^{\mathrm{T}} \boldsymbol{b} \text {. }\]
+
+    <p>Squared length for any $x$</p>
+
+\[\|A \boldsymbol{x}-\boldsymbol{b}\|^2=\|A \boldsymbol{x}-\boldsymbol{p}\|^2+\|\boldsymbol{e}\|^2\]
+
+\[\text { The least squares solution } \widehat{x} \text { makes } E=\|A x-b\|^{2} \text { as small as possible. }\]
+
+\[\|A \boldsymbol{x}-\boldsymbol{b}\|^{2}=\boldsymbol{x}^{\mathrm{T}} A^{\mathrm{T}} A \boldsymbol{x}-2 \boldsymbol{x}^{\mathrm{T}} A^{\mathrm{T}} \boldsymbol{b}+\boldsymbol{b}^{\mathrm{T}} \boldsymbol{b}\]
+  </li>
+  <li>
+    <p>By calculus</p>
+
+\[\text { The partial derivatives of }\|A x-b\|^{2} \text { are zeno when } A^{\mathrm{T}} A \hat{x}=A^{\mathrm{T}} b \text {. }
+\\\]
+  </li>
+</ol>
+
+<p><img src="https://live.staticflickr.com/65535/52199933392_5ae30a21fd_o.png" alt="Screen Shot 2022-07-07 at 10.23.43 PM" /></p>
+
+<h2 id="fitting-a-straight-line">Fitting a Straight Line</h2>
+
+\[\begin{equation}
+A^{\mathrm{T}} A \widehat{\boldsymbol{x}}=A^{\mathrm{T}} \boldsymbol{b}
+\end{equation}\]
+
+\[\begin{equation}
+\text { Dot-product matrix } \boldsymbol{A}^{\mathbf{T}} \boldsymbol{A}=\left[\begin{array}{ccc}
+1 &amp; \cdots &amp; 1 \\
+t_{1} &amp; \cdots &amp; t_{m}
+\end{array}\right]\left[\begin{array}{cc}
+1 &amp; t_{1} \\
+\vdots &amp; \vdots \\
+1 &amp; t_{m}
+\end{array}\right]=\left[\begin{array}{cc}
+m &amp; \sum t_{i} \\
+\sum t_{i} &amp; \sum t_{i}^{2}
+\end{array}\right] \text {. }
+\end{equation}\]
+
+\[\begin{equation}
+A^{\mathrm{T}} \boldsymbol{b}=\left[\begin{array}{ccc}
+1 &amp; \cdots &amp; 1 \\
+t_{1} &amp; \cdots &amp; t_{m}
+\end{array}\right]\left[\begin{array}{c}
+b_{1} \\
+\vdots \\
+b_{m}
+\end{array}\right]=\left[\begin{array}{c}
+\sum b_{i} \\
+\sum t_{i} b_{i}
+\end{array}\right]
+\end{equation}\]
+
+\[\begin{equation}
+A^{\mathrm{T}} A \widehat{\boldsymbol{x}}=A^{\mathrm{T}} \boldsymbol{b} \quad\left[\begin{array}{cc}
+m &amp; \sum t_{i} \\
+\sum t_{i} &amp; \sum t_{i}^{2}
+\end{array}\right]\left[\begin{array}{l}
+C \\
+D
+\end{array}\right]=\left[\begin{array}{c}
+\sum b_{i} \\
+\sum t_{i} b_{i}
+\end{array}\right]
+\end{equation}\]
+
+<h2 id="fitting-by-a-parabola">Fitting by a Parabola</h2>
+
+\[\begin{equation}
+A^{\mathrm{T}} A \widehat{\boldsymbol{x}}=A^{\mathrm{T}} \boldsymbol{b}
+\end{equation}\]
+
+\[\begin{array}{cl}C+D t_{1}+E t_{1}^{2}=b_{1} &amp; \text { is } A \boldsymbol{x}=\boldsymbol{b} \text { with } \\ \vdots &amp; \text { the } m \text { by } 3 \text { matrix } \\ C+D t_{m}+E t_{m}^{2}=b_{m} &amp; \end{array} A=\left[\begin{array}{ccc}1 &amp; t_{1} &amp; t_{1}^{2} \\ \vdots &amp; \vdots &amp; \vdots \\ 1 &amp; t_{m} &amp; t_{m}^{2}\end{array}\right]\]
+
+<p>Least squares: The closest parabola $C+D t+E t^{2}$ chooses $\widehat{\boldsymbol{x}}=(C, D, E)$ to satisfy the three normal equations $A^{\mathrm{T}} A \widehat{\boldsymbol{x}}=A^{\mathrm{T}} \boldsymbol{b}$.</p>
+
+<h2 id="q-replace-a">Q replace A</h2>
+
+\[\begin{equation}
+A^{\mathrm{T}} A \widehat{\boldsymbol{x}}=A^{\mathrm{T}} \boldsymbol{b}
+\end{equation}\]
+
+\[A^{\mathrm{T}} A=Q^{\mathrm{T}} Q=I\]
+
+\[\widehat{\boldsymbol{x}}=Q^{\mathrm{T}} \boldsymbol{b}\]
+
+\[P=A\left(A^{\mathrm{T}} A\right)^{-1} A^{\mathrm{T}}=Q Q^{\mathrm{T}}\]
+
+<p>When $Q$ is square and $m=n$. In this case $\boldsymbol{p}=\boldsymbol{b}$ and $P=Q Q^{\mathrm{T}}=I$.</p>
+
+\[\boldsymbol{p}=Q \widehat{\boldsymbol{x}}=Q Q^{\mathrm{T}} \boldsymbol{b}\]
+
+<p>Every $\boldsymbol{b}=Q Q^{\mathrm{T}} \boldsymbol{b}$ is the sum of its components along the q’s:</p>
+
+\[\boldsymbol{b}=\boldsymbol{q}_{1}\left(\boldsymbol{q}_{1}^{\mathrm{T}} \boldsymbol{b}\right)+\boldsymbol{q}_{2}\left(\boldsymbol{q}_{2}^{\mathrm{T}} \boldsymbol{b}\right)+\cdots+\boldsymbol{q}_{n}\left(\boldsymbol{q}_{n}^{\mathrm{T}} \boldsymbol{b}\right)\]
+
+<p>Then $b$ is decomposited into the composition of different orthogonal basis.</p>
+
+<p>Transforms: $Q Q^{\mathrm{T}}=I$ is the foundation of Fourier series and all the great “transforms” of applied mathematics. They break vectors $\boldsymbol{b}$ or functions $f(x)$ into perpendicular pieces. Then by adding the pieces, the inverse transform puts $b$ and $f(x)$ back together.</p>
+
+<h2 id="use-qr-decomposition">Use QR decomposition</h2>
+
+\[\begin{equation}
+A^{\mathrm{T}} A \widehat{\boldsymbol{x}}=A^{\mathrm{T}} \boldsymbol{b}
+\end{equation}\]
+
+\[\boldsymbol{A}^{\mathrm{T}} \boldsymbol{A}=(\boldsymbol{Q} \boldsymbol{R})^{\mathrm{T}} \boldsymbol{Q} R=\boldsymbol{R}^{\mathrm{T}} \boldsymbol{Q}^{\mathrm{T}} \boldsymbol{Q} \boldsymbol{R}=\boldsymbol{R}^{\mathrm{T}} \boldsymbol{R}\]
+
+\[R^{\mathrm{T}} R \widehat{\boldsymbol{x}}=R^{\mathrm{T}} Q^{\mathrm{T}} \boldsymbol{b} \text { or } R \widehat{\boldsymbol{x}}=Q^{\mathrm{T}} \boldsymbol{b} \text { or } \widehat{\boldsymbol{x}}=R^{-1} Q^{\mathrm{T}} \boldsymbol{b}\]
+
+<p>We can solve it by backward substitution. The cost is the $mn^2$ multiplications in the Gram-Schmidt process, which are needed to construct the orthogonal $Q$ and the triangular $R$ with $A = QR$.</p>
+
+<h1 id="the-gram-schmidt-process">The Gram-Schmidt Process</h1>
+
+<p>One and only one idea: Subtract from every new vector its projections in the directions already set.</p>
+
+<p>Producing unit orthogonal vectors from existing vectors.</p>
+
+<ol>
+  <li>
+    <p>choosing $A=a$</p>
+  </li>
+  <li>
+    <p>Start with $b$ and subtract its projection along $A$</p>
+  </li>
+</ol>
+
+<p>$\boldsymbol{B}=\boldsymbol{b}-\frac{\boldsymbol{A}^{\mathrm{T}} \boldsymbol{b}}{\boldsymbol{A}^{\mathrm{T}} \boldsymbol{A}} \boldsymbol{A}$</p>
+
+<ol>
+  <li>same process with $c, d, e,\ldots$</li>
+</ol>
+
+\[\boldsymbol{C}=\boldsymbol{c}-\frac{\boldsymbol{A}^{\mathrm{T}} \boldsymbol{c}}{\boldsymbol{A}^{\mathrm{T}} \boldsymbol{A}} \boldsymbol{A}-\frac{\boldsymbol{B}^{\mathrm{T}} \boldsymbol{c}}{\boldsymbol{B}^{\mathrm{T}} \boldsymbol{B}} \boldsymbol{B}\]
+
+<p>Final step. divide the orthogonal vectors by their lengths.</p>
+
+<h4 id="aqr">$A=QR$</h4>
+
+<p>Gram-Schmidt in a nutshell</p>
+
+\[A=Q R=(\text { orthogonal } Q)(\text { triangular } R)\]
+
+\[\left[\begin{array}{lll}a &amp; b &amp; c\end{array}\right]=\left[\begin{array}{lll} &amp; &amp; \\ \boldsymbol{q}_{1} &amp; \boldsymbol{q}_{2} &amp; \boldsymbol{q}_{3}\\  &amp; &amp; \end{array}\right]\left[\begin{array}{lll}\boldsymbol{q}_{1}^{\mathrm{T}} \boldsymbol{a} &amp; \boldsymbol{q}_{1}^{\mathrm{T}} \boldsymbol{b} &amp; \boldsymbol{q}_{1}^{\mathrm{T}} \boldsymbol{c} \\ &amp; \boldsymbol{q}_{2}^{\mathrm{T}} \boldsymbol{b} &amp; \boldsymbol{q}_{2}^{\mathrm{T}} \boldsymbol{c} \\ &amp; &amp; \boldsymbol{q}_{3}^{\mathrm{T}} \boldsymbol{c}\end{array}\right] \quad \text{or} \quad \boldsymbol{A}=\boldsymbol{Q} \boldsymbol{R}\]
+
+<p>Any $m$ by $n$ matrix $A$ with independent columns can be factored into $A = QR$.</p>
+
+<h2 id="gram-schmidt">Gram-Schmidt</h2>
+
+<p>From independent vectors $a_{1}, \ldots, a_{n}$, Gram-Schmidt constructs orthonormal vectors $q_{1}, \ldots, q_{n}$.</p>
+
+<p>The matrices with these columns satisfy $A=Q R$. Then $R=Q^{\mathrm{T}} A$ is upper triangular because later $\boldsymbol{q}$ ‘s are orthogonal to earlier $\boldsymbol{a}$ ‘s.</p>
+:ET

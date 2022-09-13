@@ -1,0 +1,110 @@
+I"*<h4 id="mean">mean</h4>
+
+<p>the average value or expected value</p>
+
+<p><img src="https://s2.loli.net/2022/07/18/FjPegLlU3Gw5cMz.png" alt="image-20220718161202937" /></p>
+
+<h4 id="expected-value">expected value</h4>
+
+<p><img src="https://s2.loli.net/2022/07/18/vnoXGHb1htImWyV.png" alt="image-20220718161231843" /></p>
+
+<h4 id="variance-sigma2">variance $\sigma^2$</h4>
+
+<p>measures the average squared distance from the mean $m$</p>
+
+<p>measures expected distance (squared) from the expected mean $E[x]$.</p>
+
+<p><img src="https://s2.loli.net/2022/07/18/MkHAFQyi4KoGn7h.png" alt="image-20220718164800455" /></p>
+
+<h4 id="sample-variance-s2">sample variance $S^2$</h4>
+
+<p>measures actual distance (squared) from the sample mean.</p>
+
+<p><img src="https://s2.loli.net/2022/07/18/vBPaRDLCMxE7ef1.png" alt="image-20220718163639529" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/18/V4dlGD3w2hEcTji.png" alt="image-20220718164848937" /></p>
+
+<h4 id="standard-deviation-sigma-or-s">standard deviation $\sigma$ or $S$</h4>
+
+<h4 id="probabilities-of-n-different-outcomes">probabilities of $n$ different outcomes</h4>
+
+<p>positive numbers $p_1, … , P_n$ adding to 1.</p>
+
+<h4 id="sample-values-expected-values">sample values, expected values</h4>
+
+<h4 id="law-of-large-numbers">Law of Large Numbers</h4>
+
+<p>With probability 1, the sample mean will converge to its expected value $E[x]$ as the sample size $N$ increases.</p>
+
+<h1 id="continuous">Continuous</h1>
+
+<p><img src="https://s2.loli.net/2022/07/19/MHibgUXS8ZYupdJ.png" alt="image-20220718185436799" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/kt4iPCvhqjZ2Npl.png" alt="image-20220718185451724" /></p>
+
+<h4 id="uniform-distribution">Uniform distribution</h4>
+
+<p><img src="https://s2.loli.net/2022/07/19/FA1xZsCvtHSmzXd.png" alt="image-20220718191045340" /></p>
+
+<h4 id="normal-distribution">Normal distribution</h4>
+
+<p><img src="https://s2.loli.net/2022/07/19/HYfPLGi9q4a7U3X.png" alt="image-20220718193120705" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/OsWw6LNgvpm2Una.png" alt="image-20220718193206143" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/ePgEBpdNcjDSoy4.png" alt="image-20220718194447755" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/Rw8QixcN9WHyzlI.png" alt="image-20220718195011328" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/2nZajTqUYK6hMct.png" alt="image-20220718195635439" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/F2dcm4EQRVSJ7bM.png" alt="image-20220718195814858" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/olQKmYNfF3jbOgJ.png" alt="image-20220718201456754" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/odu2E1gR8QBmb5j.png" alt="image-20220718202207497" /></p>
+
+<h4 id="monte-carlo-estimation-methods">Monte Carlo Estimation Methods</h4>
+
+<p>accepting uncertainty in the inputs and estimating the variance in the outputs.</p>
+
+<p>try different inputs $b$ and compute the outputs $x$ and take an average.</p>
+
+<p>Monte Carlo approximates an expected value $E[x]$ by a sample average $(x_1 + · · · +x_N )/ N$.</p>
+
+<p><img src="https://s2.loli.net/2022/07/19/YcNnMeGKk31ZlHF.png" alt="image-20220718213030484" /></p>
+
+<h4 id="covariance">Covariance</h4>
+
+<p><img src="https://s2.loli.net/2022/07/19/WVA2YB1UCzsGcjQ.png" alt="image-20220718223449475" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/dAWzNnH6bfes7Ra.png" alt="image-20220718223505780" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/t6kgyAaQVXWUuRE.png" alt="image-20220718223658835" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/Y69xuFqEgDXwayB.png" alt="image-20220718224705394" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/1BlK5RV38uidT6c.png" alt="image-20220719083623710" /></p>
+
+<p>Diagonalizing the covariance matrix means finding $M$ independent experiments as combinations of the original $M$ experiments.</p>
+
+<h4 id="whitening-the-noise">“whitening” the noise:</h4>
+
+<p><img src="https://s2.loli.net/2022/07/19/RVEOKvk9c4XhJ8p.png" alt="image-20220719084106817" /></p>
+
+<h4 id="kalman-filter">Kalman Filter</h4>
+
+<p>dynamic: new measurements $b_k$ keep coming.</p>
+
+<p>matrix $A$ is also changing.</p>
+
+<p>recursive least squares: adding new data $b_k$ and updating both $\hat{x}$ and $W$.</p>
+
+<p><img src="https://s2.loli.net/2022/07/19/xviK2uljR6EVySn.png" alt="image-20220719084809771" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/H6MRAsmwFaQ12xh.png" alt="image-20220719084817405" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/t4JmUFZo5wNCO9r.png" alt="image-20220719084827527" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/QcYi4VaDXfRZ1dK.png" alt="image-20220719084841455" /></p>
+:ET

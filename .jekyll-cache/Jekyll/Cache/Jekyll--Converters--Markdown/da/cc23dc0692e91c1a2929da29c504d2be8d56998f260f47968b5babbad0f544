@@ -1,0 +1,152 @@
+I"�<h4 id="affine-set">affine set</h4>
+
+<p>A set  $C \subseteq \mathbf{R}^{n}$ is <strong>affine</strong> if the line through any two distinct points in $C$ lies in $ C$.</p>
+
+<p>Every affine set can be expressed as the solution set of a system of linear equations.</p>
+
+<p><img src="https://live.staticflickr.com/65535/52212234482_fb037e04b7_o.png" alt="Screen Shot 2022-07-13 at 11.06.48 AM" /></p>
+
+<h4 id="aﬃne-combination-of-x_1-ldots-x_k">Aﬃne combination of $x_1, \ldots x_k$</h4>
+
+<p>$\theta_{1} x_{1}+\cdots+\theta_{k} x_{k}$ where $\theta_{1}+\cdots+\theta_{k}=1$</p>
+
+<p>an aﬃne set contains every aﬃne combination of its points.</p>
+
+<h4 id="affine-hull">Affine hull</h4>
+
+<p>The set of all aﬃne combinations of points in some set $C \subseteq \mathbf{R}^{n}$</p>
+
+\[\text { aff } C=\left\{\theta_{1} x_{1}+\cdots+\theta_{k} x_{k} \mid x_{1}, \ldots, x_{k} \in C, \theta_{1}+\cdots+\theta_{k}=1\right\}\]
+
+<h4 id="affine-dimension">Affine dimension</h4>
+
+<p>We deﬁne the affine dimension of a set C as the dimension of its aﬃne hull.</p>
+
+<h4 id="relative-interior-of-set-c">Relative interior of set $C$</h4>
+
+<h4 id="text--relint--cx-in-c-mid-bx-r-cap-text--aff--c-subseteq-c-text--for-some--r0-where-bx-ry-midy-x-leq-r">$\text { relint } C={x \in C \mid B(x, r) \cap \text { aff } C \subseteq C \text { for some } r&gt;0}$ Where $B(x, r)={y \mid|y-x| \leq r}$</h4>
+
+<h4 id="convex-sets">Convex sets</h4>
+
+<p>A set $C$ is convex if the line segment between any two points in $C$ lies in $C$.</p>
+
+<p>A convex set every locally optimal solution is global.</p>
+
+<h4 id="convex-combination-of-x_1-ldots-x_k">Convex combination of $x_1, \ldots x_k$</h4>
+
+<p>$\theta_{1} x_{1}+\cdots+\theta_{k} x_{k}$ where $\theta_{1}+\cdots+\theta_{k}=1$, and $\theta_{i} \geq 0, i=1, \ldots, k$. A convex combination of points can be thought of as a mixture or weighted average of the points.</p>
+
+<h4 id="convex-hull">Convex hull</h4>
+
+<p>is the smallest convex set that contains $C$</p>
+
+\[\operatorname{conv} C=\left\{\theta_{1} x_{1}+\cdots+\theta_{k} x_{k} \mid x_{i} \in C, \theta_{i} \geq 0, i=1, \ldots, k, \theta_{1}+\cdots+\theta_{k}=1\right\}\]
+
+<p><img src="https://s2.loli.net/2022/07/21/CnHvu2MqBWDT9hb.png" alt="image-20220720230059916" /></p>
+
+<h4 id="cone">cone</h4>
+
+<p>A set $C$ is called a <strong>cone</strong>, or <strong>nonnegative homogeneous,</strong> if for every $x \in C$ and $\theta \geq 0$ we have $\theta x \in C$.</p>
+
+<h4 id="convex-cone">convex cone</h4>
+
+<p>A set $C$ is a <strong>convex cone</strong> if it is convex and a cone, which means that for any $x_{1}, x_{2} \in C$ and $\theta_{1}, \theta_{2} \geq 0$, we have $\theta_{1} x_{1}+\theta_{2} x_{2} \in C$.</p>
+
+<h4 id="conic-combination">conic combination</h4>
+
+<p>A point of the form $\theta_{1} x_{1}+\cdots+\theta_{k} x_{k}$ with $\theta_{1}, \ldots, \theta_{k} \geq 0$ is called a <strong>conic combination</strong> (or a <strong>nonnegative linear combination</strong>) of $x_{1}, \ldots, x_{k}$.</p>
+
+<h4 id="conic-hull">conic hull</h4>
+
+<p>The <strong>conic hull</strong> of a set $C$ is the set of all conic combinations of points in $C, i . e .$</p>
+
+\[\left\{\theta_{1} x_{1}+\cdots+\theta_{k} x_{k} \mid x_{i} \in C, \theta_{i} \geq 0, i=1, \ldots, k\right\}\]
+
+<p><img src="https://s2.loli.net/2022/07/21/v31At7FGOTU4RzN.png" alt="image-20220720230129635" /></p>
+
+<p>Affine &gt; cone &gt; convex</p>
+
+<h4 id="hyperplane">hyperplane</h4>
+
+<p><img src="https://s2.loli.net/2022/07/22/Ydh2nXMrkDjLuvS.png" alt="image-20220722163155786" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/22/8hpXyIa1v745WTJ.png" alt="image-20220722162902484" /></p>
+
+<p>Analytically it is the solution set of a nontrivial linear equation among the components of x (and hence an affine set).</p>
+
+<p><img src="https://s2.loli.net/2022/07/22/5y9x6NkRUfHzWGK.png" alt="image-20220722165851620" /></p>
+
+<h4 id="half-spaces">half spaces</h4>
+
+<p><img src="https://s2.loli.net/2022/07/23/Gp5JqTnAgd6EkcN.png" alt="image-20220722181328554" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/22/9q4mciNLgvZxdOW.png" alt="image-20220722172842182" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/23/faeQwkmHzEKWAd1.png" alt="image-20220722181241168" /></p>
+
+<h4 id="euclidian-norm">Euclidian Norm</h4>
+
+<p><img src="https://s2.loli.net/2022/07/23/n4SQJ1Wf7m2ibyM.png" alt="image-20220722184556317" /></p>
+
+<h4 id="euclidean-balls">Euclidean balls</h4>
+
+<p><img src="https://s2.loli.net/2022/07/23/hcZMC5a36DWOJw1.png" alt="image-20220722183949404" />#</p>
+
+<p><img src="https://s2.loli.net/2022/07/23/YzWkFgQin83ROIf.png" alt="image-20220722184858800" /></p>
+
+<h4 id="ellipsoids">ellipsoids</h4>
+
+<p><img src="https://s2.loli.net/2022/07/23/AS8kJ1Wxyqf6lHs.png" alt="image-20220722191559915" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/23/le2ThV4dsZWngiX.png" alt="image-20220722191543139" /></p>
+
+<h4 id="norm-ball">Norm ball</h4>
+
+<p><img src="https://s2.loli.net/2022/07/23/jyufSWVli7R4IZB.png" alt="image-20220722194829785" /></p>
+
+<h4 id="nrom-corn">Nrom corn</h4>
+
+<p><img src="https://s2.loli.net/2022/07/23/8eH7KlCo4tuORQS.png" alt="image-20220722194937021" /></p>
+
+<h4 id="second-order-corn">Second order corn</h4>
+
+<p><img src="https://s2.loli.net/2022/07/23/TFiKftBJNa5rPDk.png" alt="image-20220722195926374" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/23/Tj9hkfE23OYBzPs.png" alt="image-20220722195000463" /></p>
+
+<h4 id="polyhedra">Polyhedra</h4>
+
+<p>A polyhedron is defined as the solution set of a finite number of linear equalities and inequalities.</p>
+
+<p>the intersection of a finite number of halfspaces and hyperplanes.</p>
+
+<p><img src="https://s2.loli.net/2022/07/23/Sg1szaQ5vjB8MVt.png" alt="image-20220722200416897" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/23/nATwbe4iOBq63um.png" alt="image-20220722202235236" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/23/vKigXVm5CPa6syI.png" alt="image-20220722202331832" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/23/DNhcrEnZ1uqJIQT.png" alt="image-20220722202528304" /></p>
+
+<h4 id="polytope">polytope</h4>
+
+<p>A bounded polyhedron</p>
+
+<h4 id="simplex">Simplex</h4>
+
+<p>affinely independent $v_0,\ldots ,v_k$:</p>
+
+<p><img src="https://s2.loli.net/2022/07/23/DcoqXLnENy25iKM.png" alt="image-20220722204838335" /></p>
+
+<h4 id="unit-simplex---n-dimension">Unit simplex - n dimension</h4>
+
+<p><img src="https://s2.loli.net/2022/07/23/nAFIRUxpsKft1iJ.png" alt="image-20220722224635017" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/23/TJYot6RGrcI9Mbf.png" alt="image-20220722224940380" /></p>
+
+<h4 id="probability-simplex---n-1-dimension">Probability simplex - n-1 dimension</h4>
+
+<p><img src="https://s2.loli.net/2022/07/23/oYiL6f4uVCrF1Dv.png" alt="image-20220722225029525" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/23/SFOxVqdUk4e87mD.png" alt="image-20220722225050705" /></p>
+:ET

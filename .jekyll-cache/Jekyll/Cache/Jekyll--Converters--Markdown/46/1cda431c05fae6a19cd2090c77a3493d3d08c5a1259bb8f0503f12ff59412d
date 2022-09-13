@@ -1,0 +1,252 @@
+I"b<h1 id="information-theory">Information theory</h1>
+
+<p><img src="https://s2.loli.net/2022/07/19/eOy1dLohzQ6HmCM.png" alt="image-20220719104113266" /></p>
+
+<h4 id="conveying-information">conveying information</h4>
+
+<ol>
+  <li>“setup”: agree on what they will communicate about, , and exactly what each sequence of bits means - <strong>code</strong>.</li>
+  <li>“outcome”: sequences of information are sent - data.</li>
+</ol>
+
+<h4 id="uncertainty">uncertainty</h4>
+
+<h4 id="boolean-functions">Boolean functions</h4>
+
+<p><img src="https://s2.loli.net/2022/07/19/ifOKhXY6lCwD8ye.png" alt="image-20220719114825806" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/Aj9qg7tTNb2DSnZ.png" alt="image-20220719115040461" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/fUPt8dc1qxDvzJY.png" alt="image-20220719115105061" /></p>
+
+<h4 id="properties-of-boolean-algebra">Properties of Boolean Algebra</h4>
+
+<p><img src="https://s2.loli.net/2022/07/19/nJo9rdTZ53Nq2kx.png" alt="image-20220719115238219" /></p>
+
+<h4 id="logic-gates">Logic gates</h4>
+
+<p><img src="https://s2.loli.net/2022/07/19/aDPz1rIW9uJbvfS.png" alt="image-20220719115517595" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/19/oNbau1j78YxRhQl.png" alt="image-20220719115538278" /></p>
+
+<h4 id="quantum-bit--qubit">quantum bit / qubit</h4>
+
+<p>a model of an object that can store a single bit but is so small that it is subject to the limitations quantum mechanics places on measurements</p>
+
+<ol>
+  <li>Reversibility: transformation between each state.</li>
+  <li>Superposition</li>
+  <li>Entanglement</li>
+</ol>
+
+<h4 id="classical-bit">classical bit</h4>
+
+<p>an abstraction in which the bit can be measured without perturbing it.</p>
+
+\[0V-0.2V=0,0.8V-1V=1\]
+
+<h4 id="encode-and-decode">encode and decode</h4>
+
+<p><img src="https://s2.loli.net/2022/07/19/rFRhSsYxWaHQzEK.png" alt="image-20220719163748627" /></p>
+
+<h4 id="symbol-space-size">symbol space size</h4>
+
+<p>the number of symbols that need to be encoded</p>
+
+<h4 id="integer-codes">Integer codes</h4>
+
+<p><img src="https://s2.loli.net/2022/07/20/B2E1pTWCVh5nYzO.png" alt="image-20220719195624004" /></p>
+
+<h4 id="morse-code">Morse code</h4>
+
+<p><img src="https://s2.loli.net/2022/07/20/WmV4yNnq7gQx8Fw.png" alt="image-20220719203232092" /></p>
+
+<h4 id="compression">Compression</h4>
+
+<p><img src="https://s2.loli.net/2022/07/20/GwyNs2iBRVWJudj.png" alt="image-20220719205911075" /></p>
+
+<ul>
+  <li>
+    <p>Variable-Length Encoding</p>
+  </li>
+  <li>
+    <p>Run Length Encoding</p>
+  </li>
+  <li>
+    <p>Static Dictionary</p>
+  </li>
+  <li>
+    <p>Semi-adaptive Dictionary</p>
+  </li>
+  <li>
+    <p>Dynamic Dictionary - LZW compression technique</p>
+
+    <p><img src="https://s2.loli.net/2022/07/21/O9hArFWmPCnEINU.png" alt="image-20220720184633043" /></p>
+  </li>
+  <li>
+    <p>Discrete Cosine Transformation</p>
+
+    <p><img src="https://s2.loli.net/2022/07/21/yNXUongwKarvhCm.png" alt="image-20220720184657241" /></p>
+  </li>
+</ul>
+
+<p><img src="https://s2.loli.net/2022/07/21/7svi48ydKrcSG1M.png" alt="image-20220720184703353" /></p>
+
+<h4 id="hamming-distance">Hamming Distance</h4>
+
+<p>the diﬀerence between two bit patterns is the number of bits that are diﬀerent between the two.</p>
+
+<h4 id="code-rate">code rate</h4>
+
+<p>the number of bits before channel coding divided by the number after the encoder.</p>
+
+<h4 id="parity">Parity</h4>
+
+<p>“check bit”added bit would be 1 if the number of bits equal to 1 is odd, and 0 otherwise.</p>
+
+<h4 id="rectangular-codes">Rectangular Codes</h4>
+
+<p><img src="https://s2.loli.net/2022/07/21/XPkx9elMAFGtDOu.png" alt="image-20220720184958471" /></p>
+
+<hr />
+
+<h1 id="probability-theory">Probability theory</h1>
+
+<h4 id="marginal-probability">Marginal Probability</h4>
+
+\[p(X=x_i)=\sum_{j=1}^Lp(X=x_i,Y=y_j)\]
+
+<h4 id="conditional-probability-of-yy_j-given-xx_i">Conditional Probability of $Y=y_j$ given $X=x_i$</h4>
+
+\[p(Y=y_i|X=x_i)=\frac{n_ij}{ci}\]
+
+<p>For single point probability</p>
+
+\[p(X=x_i,Y=y_j)=\frac{n_{ij}}{c_i}\cdot\frac{c_i}{N}=p(Y=y_j|X=x_i)P(X=x_i)\]
+
+<h4 id="sum-rule">Sum Rule</h4>
+
+\[p(X)=\sum_Yp(X,Y)\]
+
+<h4 id="product-rule">Product Rule</h4>
+
+\[p(X,Y)=p(Y|X)p(X)\]
+
+<h4 id="bayes-theorem">Bayes’ Theorem</h4>
+
+\[p(Y|X)=\frac{p(X|Y)p(Y)}{p(X)}\]
+
+\[p(X)=\sum_Yp(X|Y)p(Y)\]
+
+<p>Continuous form:</p>
+
+\[p(x)=\int p(x,y)\mathrm{d}y\]
+
+\[p(x,y)=p(y|x)p(x)\]
+
+<h4 id="probability-density-over-x-px">Probability Density over $x$: $p(x)$</h4>
+
+\[p(x\in(a,b))=\int_a^bp(x)\mathrm{d}x\]
+
+\[p(x)\geq0\]
+
+\[\int_{-\infty}^{\infty}p(x)=1\]
+
+<h4 id="cumulative-distribution-function-pz">Cumulative Distribution Function $P(z)$</h4>
+
+\[P(z)=\int_{-\infty}^zp(x)\mathrm{d}x\]
+
+\[P'(x)=p(x)\]
+
+<h4 id="joint-probability-density-in-mathbfx-space">Joint Probability Density in $\mathbf{x}$ Space</h4>
+
+\[p(\mathbf{x})=p(x_1,...,x_D)\]
+
+\[p(\mathbf{x})\geq0\]
+
+\[\int_{-\infty}^{\infty}p(\mathbf{x})=1\]
+
+<p>If $\mathbf{x}$ is discrete, $p(\mathbf{x})$ is called \emph{<em>probability mass function</em>}.</p>
+
+<h4 id="expectation-of-fx-mathbbef">Expectation of $f(x)$: $\mathbb{E}(f)$</h4>
+
+\[\mathbb{E}[f]=\sum_xp(x)f(x)\]
+
+\[\mathbb{E}[f]=\int p(x)f(x)\mathrm{d}x\]
+
+<p>Approximation:</p>
+
+\[\mathbb{E}[f]\simeq\frac{1}{N}\sum_{n=1}^N f(x_n)\]
+
+<p>Multi-variable:</p>
+
+\[\mathbb{E}_x[f(x,y)]\]
+
+\[\mathbb{E}_x[f|y]=\sum_xp(x|y)f(x)\]
+
+<h4 id="variance">Variance</h4>
+
+\[\mathrm{var}[f]=\mathbb{E}[(f(x)-\mathbb{E}[f(x)])^2]\]
+
+\[\mathrm{var}[f]=\mathbb{E}[f(x)^2]-\mathbb{E}[f(x)]^2\]
+
+<p>In particular,</p>
+
+\[\mathrm{var}[x]=\mathbb{E}[x^2]-\mathbb{E}[x]^2\]
+
+<p>Covariance of two random variables:</p>
+
+\[\mathrm{cov}[x,y]=\mathbb{E}_{x,y}[\{x-\mathbb{E}[x]\}\{y-\mathbb{E}[y]\}]=\mathbb{E}_{x,y}[xy]-\mathbb{E}[x]\mathbb{E}[y]\]
+
+<p>For two vectors:</p>
+
+\[\mathrm{cov}[\mathbf{x},\mathbf{y}]=\mathbb{E}_{\mathbf{x},\mathbf{y}}[\{\mathbf{x}-\mathbb{E}[\mathbf{x}]\}\{\mathbf{y}^\mathrm{T}-\mathbb{E}[\mathbf{y}^\mathrm{T}]\}]=\mathbb{E}_{\mathbf{x},\mathbf{y}}[\mathbf{x}\mathbf{y}^\mathrm{T}]-\mathbb{E}[\mathbf{x}]\mathbb{E}[\mathbf{y}^\mathrm{T}]\]
+
+\[\mathrm{cov}[\mathbf{x}]\equiv\mathrm{cov}[\mathbf{x,x}]\]
+
+<h4 id="bayesian-probabilities">Bayesian Probabilities</h4>
+
+<p>Quantify the uncertainty that surrounds the appropriate choice for the model parameters $\mathbf{w}$.</p>
+
+\[\mathrm{posterior\propto likelihood\times prior}\]
+
+\[p(\mathbf{w}|\mathcal{D})=\frac{p(\mathcal{D}|\mathbf{w})p(\mathbf{w})}{p(\mathcal{D})}\]
+
+\[p(\mathcal{D})=\int p(\mathcal{D}|\mathbf{w})p(\mathbf{w})\mathrm{d}\mathbf{w}\]
+
+<h4 id="data-mathcald">Data $\mathcal{D}$</h4>
+
+<h4 id="parameter-mathbfw">Parameter $\mathbf{w}$</h4>
+
+<h4 id="likelihood-function">Likelihood Function</h4>
+
+\[p(\mathcal{D}|\mathbf{w})=f(\mathbf{w})\]
+
+<p>It expresses how probable the observed data set is for different settings of the parameter vector $\mathbf{w}$.</p>
+
+<h4 id="estimator-maximum-likelihood">Estimator: Maximum Likelihood</h4>
+
+<p>Set $\mathbf{w}$ to make $p(\mathcal{D}|\mathbf{w})$ maximum.</p>
+
+<h4 id="error-function">Error Function</h4>
+
+\[-\log(p(\mathcal{D}|\mathbf{w}))\]
+
+<h4 id="decision-theory">Decision Theory</h4>
+
+<p>Minimizing the misclassification rate.</p>
+
+<h5 id="class-mathcalc_k">Class $\mathcal{C}_k$</h5>
+
+<h5 id="decision-region-mathcalr_k">Decision Region $\mathcal{R}_k$</h5>
+
+<h5 id="decision-boundaries--decision-surfaces">Decision Boundaries / Decision Surfaces</h5>
+
+<h2 id="permutation-and-combination">Permutation and Combination</h2>
+
+\[0!=1\]
+
+\[A_n^m=\frac{n!}{(n-m)!}\]
+
+\[C_n^m=\frac{n!}{m!(n-m)!}\]
+:ET

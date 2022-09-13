@@ -1,0 +1,114 @@
+I"X<h4 id="incidence-matrix">Incidence matrix</h4>
+
+<p><img src="https://s2.loli.net/2022/07/16/XSIg4cJajCvMDLx.png" alt="image-20220716120827293" /></p>
+
+<h4 id="complete">complete</h4>
+
+<p>every pair of nodes is connected by an edge</p>
+
+<p>maximum edges $\frac{1}{2}n(n-1)$</p>
+
+<h4 id="tree">Tree</h4>
+
+<p>no closed loops</p>
+
+<p>minimum edges $n-1$</p>
+
+<ul>
+  <li>Elimination reduces every graph to a tree.</li>
+</ul>
+
+<h4 id="kirchhoffs-voltage-law">Kirchhoff’s Voltage Law:</h4>
+
+<p>he components of $Ax = b$ add to zero around every loop.</p>
+
+<h4 id="kirchhoffs-current-law">Kirchhoff’s Current Law:</h4>
+
+<p>\(A^\mathbf{T} y = 0\)
+Flow in equals flow out at each node.</p>
+
+<p>the matrix in this balance equation is the transpose of the incidence matrix A.</p>
+
+<p><img src="https://s2.loli.net/2022/07/17/DxbjlTFzBkLRoa4.png" alt="image-20220716214219336" /></p>
+
+<h4 id="eulers-formula">Euler’s formula</h4>
+
+\[\text{(number of nodes) - (number of edges) + (number of small loops)} = 1\]
+
+\[( n) - ( m) + ( m - n + 1) = 1\]
+
+<h4 id="laplacian-matrix">Laplacian matrix</h4>
+
+<p><img src="https://s2.loli.net/2022/07/17/Hqg9YTCZkU2XtoF.png" alt="image-20220716222115406" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/17/Sq5NvRioJHwca6C.png" alt="image-20220716222124750" /></p>
+
+<h4 id="stiffness-matrix">stiffness matrix</h4>
+
+<p><img src="https://s2.loli.net/2022/07/17/rHRtLsv6d1bEgpB.png" alt="image-20220717092045628" /></p>
+
+<h4 id="markov-matrix">Markov Matrix</h4>
+
+<ol>
+  <li>Every entry of $A$ is positive: $a_{ij} &gt; 0$.</li>
+  <li>Every column of $A$ adds to 1.</li>
+</ol>
+
+<p><img src="https://s2.loli.net/2022/07/17/lWeE2zbipSy1q7Z.png" alt="image-20220717095104838" /></p>
+
+<h4 id="perron-frobenius-theorem">Perron-Frobenius Theorem</h4>
+
+<p><img src="https://s2.loli.net/2022/07/17/sjFb2c36A5tl7rI.png" alt="image-20220717095211722" /></p>
+
+<h4 id="linear-programming">Linear Programming</h4>
+
+<p>Linear programming is linear algebra plus two new ideas: inequalities and minimization.</p>
+
+<p>he cost is $c_1 x_1 + · · · + c_nx_n$. The winning vector $x^*$ is the nonnegative solution of $Ax = b$ that has smallest cost.</p>
+
+<p><img src="https://s2.loli.net/2022/07/17/t8sfSVCNjU1PbDz.png" alt="image-20220717105845230" /></p>
+
+<p>Solution is the <strong>corners</strong>!</p>
+
+<h4 id="duality">Duality</h4>
+
+\[\text{max=min}\]
+
+<p>The number of independent rows equals the number of independent columns.</p>
+
+<p><img src="https://s2.loli.net/2022/07/17/CemvlTHRNMgbnEd.png" alt="image-20220717114705270" /></p>
+
+<h4 id="simplex-method-moves-along-the-edges-of-the-feasible-set">Simplex method (moves along the edges of the feasible set)</h4>
+
+<p>The simplex method goes from one corner to a neighboring corner of lower cost. (move along edge)</p>
+
+<p>A <strong>corner</strong> is a vector $x\geq0$ that satisfies the $m$ equations $Ax = b$ with at most $m$ positive components. The other $n - m$ components are zero.</p>
+
+<p>The simplex method must decide which component “enters” by becoming positive, and which component “leaves” by becoming zero. The <strong>entering variable</strong> is the one that gives the <strong>most negative reduced cost</strong> $r$.</p>
+
+<p>Solve the $Ax=b$ by iterately knock off the free column from $A$, then solve the $Bx=b$. (a column enters and an old column leaves)</p>
+
+<h4 id="interior-point-methods-move-inside-the-feasible-set">Interior Point Methods (move inside the feasible set)</h4>
+
+<p><img src="https://s2.loli.net/2022/07/17/1LCRc5raz7tAGhw.png" alt="image-20220717144203291" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/17/OH1D7WZuRyKvGNC.png" alt="image-20220717145121620" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/17/hNW5AjuPvdcQnmb.png" alt="image-20220717145143397" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/17/ad2sT4x3mPUtEcl.png" alt="image-20220717145218909" /></p>
+
+<h4 id="hilbert-spaces">Hilbert spaces</h4>
+
+<p><img src="https://s2.loli.net/2022/07/17/OsM3k9QYZNp5CBl.png" alt="image-20220717145635275" /></p>
+
+<p><img src="https://s2.loli.net/2022/07/17/UpkvHmdhK8tNFT6.png" alt="image-20220717153147736" /></p>
+
+<h4 id="homogeneous-coordinate">Homogeneous coordinate</h4>
+
+<p><img src="https://s2.loli.net/2022/07/17/JyVmWl5sP2voT6S.png" alt="image-20220717174342178" /></p>
+
+<h4 id="field-f">Field $F$</h4>
+
+<p>a set of scalars that can be added and multiplied and inverted (except 0 can’t be inverted).</p>
+:ET

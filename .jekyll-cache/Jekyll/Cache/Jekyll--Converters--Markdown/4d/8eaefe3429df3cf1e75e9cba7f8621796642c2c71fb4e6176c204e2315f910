@@ -1,0 +1,54 @@
+I"C	<p><img src="https://s2.loli.net/2022/08/01/wfe5PRNDG3lpKry.png" alt="image-20220801090028851" /></p>
+
+<h4 id="underfitting-to-overfitting">underfitting to overfitting</h4>
+
+<p><img src="https://s2.loli.net/2022/08/02/F9rYtRdLp2vfowl.png" alt="image-20220802164836639" /></p>
+
+<h1 id="linear-regression">linear regression</h1>
+
+<h4 id="cost-function">Cost function</h4>
+
+<p><img src="https://s2.loli.net/2022/08/01/1l56jeMFcvUWkmR.png" alt="image-20220801090746736" /></p>
+
+<h4 id="gradient-descent">Gradient descent</h4>
+
+<p><img src="https://s2.loli.net/2022/08/01/2rSAjOy7RFlmpa5.png" alt="image-20220801111446926" /></p>
+
+<h4 id="multivariable-linear-function">Multivariable linear function</h4>
+
+<p><img src="https://s2.loli.net/2022/08/01/hSLyUTRqW8jCMzn.png" alt="image-20220801114639624" /></p>
+
+<h1 id="classification">classification</h1>
+
+<h4 id="cost-function-1">Cost function</h4>
+
+<p><img src="https://s2.loli.net/2022/08/02/3n4PdEzY5JKqBDk.png" alt="image-20220801203845997" /></p>
+
+<p><img src="https://s2.loli.net/2022/08/02/7NsyF4nHoRGdXpM.png" alt="image-20220802120520817" /></p>
+
+<p><img src="https://s2.loli.net/2022/08/02/qY5tZmP8JF9O4sx.png" alt="image-20220802121824632" /></p>
+
+<h4 id="gradient-descent-1">Gradient descent</h4>
+
+<p><img src="https://s2.loli.net/2022/08/02/PYxNlIKGaXZM4b8.png" alt="image-20220802121851140" /></p>
+
+<h4 id="multivariable-classifier--multiclassifier">Multivariable classifier ( multiclassifier)</h4>
+
+<p><img src="https://s2.loli.net/2022/08/02/BdNrnGwkxf3tqCS.png" alt="image-20220802153335416" /></p>
+
+<h4 id="sigmoid-function--logistic-function">Sigmoid Function / Logistic Function</h4>
+
+<p>“transforming an arbitrary-valued function into a function better suited for classification.”</p>
+
+<p><img src="https://s2.loli.net/2022/08/02/vcSnbPmD8yI9aYF.png" alt="image-20220801181311332" /></p>
+
+<p>Transform the linear space into a curved space, still regression but additional extreme value won’t distort the prediction much as linear regression.</p>
+
+<p><img src="https://s2.loli.net/2022/08/02/R4zEtQqodJU3Kgw.png" alt="image-20220801181330305" /></p>
+
+<h4 id="regularization">Regularization</h4>
+
+<p><img src="https://s2.loli.net/2022/08/02/9pHn4vA2ySzelwO.png" alt="image-20220802172219183" /></p>
+
+<p><img src="https://s2.loli.net/2022/08/03/wg5nN6D8Z3CKa79.png" alt="image-20220802182358795" /></p>
+:ET

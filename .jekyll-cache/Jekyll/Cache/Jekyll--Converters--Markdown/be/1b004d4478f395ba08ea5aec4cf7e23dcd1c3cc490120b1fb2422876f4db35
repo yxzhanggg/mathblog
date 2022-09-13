@@ -1,0 +1,730 @@
+I"�b<h1 id="transfromations-of-independent-variable">Transfromations of Independent Variable</h1>
+
+<h4 id="time-shift">Time Shift</h4>
+
+\[x[n]\longrightarrow x[n-\color{red}{n_0}]\]
+
+\[x(t)\longrightarrow x(t-\color{red}{t_0})\]
+
+<p>The origin moves form 0 to $\color{red}{n_0}$ or $\color{red}{t_0}$.</p>
+
+<p>delayed: $\color{red}{n_0}/\color{red}{t_0}&gt;0$.</p>
+
+<p>advanced: $\color{red}{n_0}/\color{red}{t_0}&lt;0$.</p>
+
+<h4 id="time-reversal">Time Reversal</h4>
+
+\[x[n]\longrightarrow x[\color{red}{-}n]\]
+
+\[x(t)\longrightarrow x(\color{red}{-}t)\]
+
+<h4 id="time-scaling">Time Scaling</h4>
+
+\[x[\alpha n]\longrightarrow \mathrm{harizontally \ scaled \ by \ a \ factor \ of} \ \frac{1}{\alpha}\]
+
+\[x(\alpha t)\longrightarrow \mathrm{harizontally \ scaled \ by \ a \ factor \ of} \ \frac{1}{\alpha}\]
+
+<h4 id="properties-of-functions">Properties of Functions</h4>
+
+<h5 id="parity">Parity</h5>
+
+\[even \ \ x[n]=-x[n] \ \ \ \ \ \ \ \ \ \ x(t)=-x(t)\]
+
+\[odd \ x[-n]=-x[n] \ \ \ \ \ \ \ \ x(-t)=-x(t)\]
+
+<p>Any signal can be broken into a sum of two signals:</p>
+
+\[x(t)=\mathcal{Ev}\{x(t)\}+\mathcal{Od}\{x(t)\}\]
+
+\[\mathcal{Ev}\{x(t)\}=\frac{1}{2}[x(t)+x(-t)]\]
+
+\[\mathcal{Od}\{x(t)\}=\frac{1}{2}[x(t)-x(-t)]\]
+
+<h5 id="periodicity">Periodicity</h5>
+
+\[x(t)=x(t+T)\]
+
+<h4 id="exponential-signals-and-sinusoidal-signals">Exponential signals and Sinusoidal signals</h4>
+
+<h5 id="real-exponential-signals">Real exponential signals</h5>
+
+\[x(t)=C\mathrm{e}^{at}\]
+
+<h5 id="sinusoidal-signals">Sinusoidal signals</h5>
+
+\[x(t)=A\cos(\omega_0t+\phi)\]
+
+<h6 id="amplitude-a--">amplitude: $A [-]$</h6>
+
+<h6 id="fundamental-period-t_0frac2piomega_0frac1f">fundamental period: $T_0=\frac{2\pi}{\omega_0}=\frac{1}{f}$</h6>
+
+<h6 id="ordinary-frequency-f--mathrms-1-rate-of-oscillation--cycles-per-second">ordinary frequency: $f \ [\mathrm{s}^{-1}]$ (rate of oscillation / cycles per second)</h6>
+
+<h6 id="fundamentalangular-frequency-mathrmrad--s-1--omega_0frac2pit_02pi-f">fundamental/angular frequency: $[\mathrm{rad \ s}^{-1}] \ \omega_0=\frac{2\pi}{T_0}=2\pi f$</h6>
+
+<h6 id="phase-phi--mathrmrad-pi--mathrmrad180mathrmo">phase: $\phi \ [\mathrm{rad}]$ (${\pi} \ \mathrm{rad}=180^\mathrm{o}$)</h6>
+
+<h5 id="forms-of-signals-expression">Forms of signals expression</h5>
+
+<p>Using Euler’s Formula, we can express or transform signals between exponential form and sinusoidal form.</p>
+
+\[A\cos(\omega_0t+\phi)=\frac{A}{2}\mathrm{e}^{j(\omega_0t+\phi)}+\frac{A}{2}\mathrm{e}^{-j(\omega_0t+\phi)}=\frac{A}{2}\mathrm{e}^{j\phi}\mathrm{e}^{j\omega_0t}+\frac{A}{2}\mathrm{e}^{-j\phi}\mathrm{e}^{-j\omega_0t}\]
+
+<p>Complex exponential form</p>
+
+\[\color{red}{C\mathrm{e}^{j(\omega_0t+\phi)}}=|C|\cos(\omega_0t+\phi)+|C|j\sin(\omega_0t+\phi)\]
+
+<p>Sinusoidal form</p>
+
+\[\color{red}{A\cos(\omega_0t+\phi)}=A\mathcal{Re}\{\mathrm{e}^{j(\omega_0t+\phi)}\}\]
+
+\[\color{red}{A\sin(\omega_0t+\phi)}=A\mathcal{Im}\{\mathrm{e}^{j(\omega_0t+\phi)}\}\]
+
+<p>We showed the properties using Continuous-time $x(t)$, the properties are also satisfied for discrete-time $x[n]$ but periodicity and phase change causing time shift. It is easy to understand because of discreate signals are not always uniformly distributed relative to its scale.</p>
+
+<h1 id="properties-of-basic-signals-and-systems">Properties of Basic Signals and Systems</h1>
+
+<h2 id="signals">Signals</h2>
+
+<h4 id="unit-impulse">Unit Impulse</h4>
+
+\[\delta[n]=
+
+\begin{cases}
+
+0&amp; \text{n$\neq$0}\\
+
+1&amp; \text{n=0}
+
+\end{cases}
+
+\quad
+
+\delta(t)=\frac{\mathrm{d}u(t)}{\mathrm{d}t}  \, (\mathrm{Area=1})\]
+
+<p>Unit impulse at $n=k$: $\delta[n-k]$</p>
+
+<h4 id="unit-step">Unit step</h4>
+
+\[u[n]=
+
+\begin{cases}
+
+0&amp; \text{n&lt;0}\\
+
+1&amp; \text{n$\geq$0}
+
+\end{cases}
+
+\quad
+
+u(t)=
+
+\begin{cases}
+
+0&amp; \text{t&lt;0}\\
+
+1&amp; \text{t&gt;0}
+
+\end{cases}\]
+
+<h4 id="relations">Relations</h4>
+
+<ul>
+  <li>
+    <p>First backward difference: $\delta[n]=u[n]-u[n-1]$</p>
+  </li>
+  <li>
+    <p>Running sum $u[n]=\sum^n_{m=-\infty}\delta[m]$</p>
+  </li>
+</ul>
+
+<p>​          Running integral $u(t)=\int_{-\infty}^t\delta(\tau)\mathrm{d}\tau$</p>
+
+<ul>
+  <li>Sequence superposition expression $u[n]=\sum^\infty_{k=0}\delta[n-k]$</li>
+</ul>
+
+<h2 id="systems">Systems</h2>
+
+<h4 id="memoryless">Memoryless</h4>
+
+\[y(t)=x(t)\]
+
+<p>Its output for each value of the independent variable at a given time is dependent on the input at only that same time.</p>
+
+<h4 id="invertibility">Invertibility</h4>
+
+\[y(t)\leftrightarrow x(t)\]
+
+<p>If distinct inputs lead to distinct outputs.</p>
+
+<h4 id="causality">Causality</h4>
+
+\[y(t)=x(t)+x(t-1)+...\]
+
+<p>If the output at any time depends on values of the input at only the present and past times.</p>
+
+<ul>
+  <li>
+    <p>“nonanticipative”: the system output does not anticipate future values of the input.</p>
+  </li>
+  <li>
+    <p>All memoryless systems are causal, since the output responds only to the current value of the input.</p>
+  </li>
+  <li>
+    <p>Initial rest: if the input to a causal system is 0 up to some point in time, then the output must also be 0 up to that time.</p>
+  </li>
+</ul>
+
+<h4 id="stability">Stability</h4>
+
+<p>Do not diverge.</p>
+
+<h4 id="time-invariance">Time Invariance</h4>
+
+\[y(t+k)=x(t+k)\]
+
+<p>If a time shift in the input signal results in an identical time shift in the output signal.\</p>
+
+<p>Not sensitive to the time origin.</p>
+
+<h4 id="linearity">Linearity</h4>
+
+\[y_1(t)+y_2(t)=x_1(t)+x_2(t)\]
+
+\[ay_1(t)=ax_1(t)\]
+
+<p>The response to $x_1(t)+x_2(t)$ is $y_1(t)+y_2(t)$.\</p>
+
+<p>The response to $ax_1(t)$ is $ay_1(t)$, where a is any complex constant.</p>
+
+<h1 id="convolution---scaled-superposition">Convolution - Scaled Superposition</h1>
+
+<ul>
+  <li>
+    <p>System: linear (superposition) \&amp; time-invariant (LTI Systems) (for many physical processes)</p>
+  </li>
+  <li>
+    <p>Signal: delayed impulses</p>
+  </li>
+  <li>
+    <p>time scale: $k/\tau$ time in impulse response; $n/t$ time in system</p>
+  </li>
+</ul>
+
+<p>We find the signal can be constructed by scaled units: Signal is superposition of scaled and shifted unit impulse.</p>
+
+<p>Then the output signal can be represented by the superposition of response signal corresponding to the desired time point scaled by input signal:</p>
+
+\[\mathrm{Output signal \ is \ the \ superposition \ of \ response signals \ scaled \ by \ input signals.}\]
+
+<p>That is the convolution.</p>
+
+<h4 id="sifting-property">Sifting property</h4>
+
+\[\mathrm{arbitrary \ sequence=linear\ conbination \ of \ shifted \ unit \ impulses} \ \delta[n-k]\]
+
+<p>Discrete-time signal can be constructed by a  a sequence of individual impulses.</p>
+
+\[\mathrm{expresion\ of \ signal} \ [\color{red}{n}] = \ &lt;\color{blue}{\mathrm{sifting \ from -\infty \ to +\infty}}&gt; \ ( \ \mathrm{individual \ impulse \ at} \ [\color{blue}{k}]\ )\]
+
+<p>The impulses can be constructed by linear conbination of unit impulses at that time.</p>
+
+\[( \ \mathrm{individual \ impulse \ at} \ [\color{blue}{k}]\ )= ( \ \mathrm{magnitude \ of \ signal \ at} \ [\color{blue}{k}]\times \mathrm{unit \ impulse \ at} \ [\color{blue}{k}] \ )\]
+
+<p>So Discrete-time signal can be constructed by additional shifted, scaled impulses.</p>
+
+\[\mathrm{expresion\ of \ signal} \ [\color{red}{n}]=\color{blue}{\mathrm{sifting \ from -\infty \ to +\infty}} \ ( \ \mathrm{magnitude \ of \ signal \ at} \ [\color{blue}{k}]\times \mathrm{unit \ impulse \ at} \ [\color{blue}{k}] \ )\]
+
+<p>In summary:</p>
+
+<p>By that we get the \emph{<em>sifting property</em>} of discrete-time unit impulse:</p>
+
+\[x[\color{red}{n}]=\color{blue}{\sum_{k=-\infty}^{+\infty}}x[\color{blue}{k}]\delta[\color{red}{n}-\color{blue}{k}]\]
+
+\[x(t)=\int_{-\infty}^{+\infty}x(\tau)\delta(t-\tau)\mathrm{d}\tau\]
+
+<h2 id="convolution-sum--superpositional-sum">Convolution Sum / Superpositional Sum</h2>
+
+\[y[n]=\sum_{+\infty}^{-\infty}x[k]h[n-k]\]
+
+\[y[n]=x[n]*h[n]\]
+
+<p>Intuitively, $y[n]$ is a superposition of the response scaled by each corresponding impulse; mathematically, $y[n]$ is the sifting and sum of product between response and impluse at point n.</p>
+
+<p>This two interpretation is equivalent is because of the property of LTI System. It makes each response shifted without any change of profile, and signals is simply  Addable.</p>
+
+<h2 id="convolution-integral--superpositional-integral">Convolution Integral / Superpositional Integral</h2>
+
+<p>Similarly, we firstly develop the \emph{<em>sifting property</em>} of the continuous-time impulse:</p>
+
+\[y(t)=\int_{-\infty}^{+\infty}x(\tau)h(t-\tau)\mathrm{d}\tau\]
+
+\[y(t)=x(t)*h(t)\]
+
+<h2 id="properties-of-linear-time-invariance-lti-system">Properties of Linear Time-invariance (LTI) System</h2>
+
+<h4 id="commutative-property">Commutative property</h4>
+
+\[x[n]*h[n]=h[n]*x[n]\]
+
+\[x(t)*h(t)=h(t)*x(t)\]
+
+<h4 id="distributive-property">Distributive property</h4>
+
+\[x[n]*(h_1[n]+h_2[n])=x[n]*h_1[n]+x[n]*h_2[n]\]
+
+\[x(t)*(h_1(t)+h_2(t))=x(t)*h_1(t)+x(t)*h_2(t)\]
+
+<h4 id="associative-property">Associative property</h4>
+
+\[x[n]*(h_1[n]*h_2[n])=(x[n]*h_1[n])*h_2[n]\]
+
+\[x(t)*[h_1(t)*h_2[t)]=[x(t)*h_1(t)]*h_2[t)\]
+
+<h4 id="is-it-memoryless">Is it memoryless?</h4>
+
+<p>A LTI system is only memoryless if the impulse response:</p>
+
+\[h[n\neq 0]=0\]
+
+\[h(t\neq 0)=0\]
+
+<p>Then the impulse response has the form:</p>
+
+\[h[n]=K\delta [n]\]
+
+\[h(t)=K\delta (t)\]
+
+<p>then the LTI system has the form:</p>
+
+\[y[n]=Kx[n]\]
+
+\[y(t)=Kx(t)\]
+
+<h4 id="invertibility-analogy-aa-1e">Invertibility (Analogy: $AA^{-1}=E$)</h4>
+
+\[h[n]*h_i[n]=\delta[n]\]
+
+\[h(t)*h_i(t)=\delta(t)\]
+
+<p>Convolving a signal with a shifted impulse is the same as shifting the signal.</p>
+
+\[x(t-t_0)=x(t)*\delta(t-t_0)\]
+
+\[h(t)*h_i(t)=\delta(t-t_0)*\delta(t+t_0)=\delta(t)\]
+
+<h4 id="is-it-causal-initial-rest-">Is it causal (initial rest) ?</h4>
+
+<p>A LTI system is only causal if and only if:</p>
+
+\[h[n&lt;0]=0\]
+
+\[h(t&lt;0)=0\]
+
+<h4 id="stability-1">Stability</h4>
+
+<p>For bounded input the system has bounded output only if the impulse response is</p>
+
+<h5 id="aabsolutely-summable">Aabsolutely summable</h5>
+
+\[\sum_{k=-\infty}^{+\infty}|h[k]|&lt;\infty\]
+
+<h5 id="absolutely-integrable">Absolutely integrable</h5>
+
+\[\int_{-\infty}^{+\infty}|h(\tau)|\mathrm{d}\tau&lt;\infty\]
+
+<h4 id="unit-step-response">Unit Step Response</h4>
+
+<p>The response of unit step.</p>
+
+\[s[n]=u[n]*h[n]\]
+
+\[s[n]=\sum_{k=-\infty}^nh[k]\]
+
+\[h[n]=s[n]-s[n-1]\]
+
+\[s(t)=\int_{-\infty}^th(\tau)\mathrm{d}\tau\]
+
+\[h(t)=\frac{\mathrm{d}s(t)}{\mathrm{d}t}=s'(t)\]
+
+<h2 id="causal-lti-system">Causal LTI system</h2>
+
+<h3 id="linear-constant-coefficient-differential-and-difference-equations-process">Linear Constant-Coefficient Differential and Difference Equations (Process)</h3>
+
+<p>A constraint between the input and the output of a system.</p>
+
+\[\mathrm{solution = particular \ solution + homogeneous \ solution}\]
+
+<p>particular: of, relating to, or concerned with details; denoting an individual member or subclass in logic.</p>
+
+<ul>
+  <li>
+    <p>Homogeneous solution / natural response: with source turned off, initial condition zero. (input is zero)</p>
+  </li>
+  <li>
+    <p>Particular solution / forced response: with source turned on, initial condition zero. (have a source as input)</p>
+  </li>
+</ul>
+
+<h2 id="nth-order-linear-cnstant-coefficient-differential-equations">Nth-order Linear Cnstant-Coefficient Differential Equations</h2>
+
+\[\sum_{k=0}^Na_k\frac{\mathrm{d}^ky(t)}{\mathrm{d}t^k}=\sum_{k=0}^Nb_k\frac{\mathrm{d}^kx(t)}{\mathrm{d}t^k}\quad\mathrm{solution}\quad y_p(t)+y_h(t)\]
+
+<h4 id="homogeneous">Homogeneous</h4>
+
+\[\sum_{k=0}^Na_k\frac{\mathrm{d}^ky(t)}{\mathrm{d}t^k}=0\quad\mathrm{solution}\quad y_h(t)\]
+
+<h4 id="guess-solution">Guess solution</h4>
+
+\[y_h(t)=A\mathrm{e}^{st}\]
+
+\[\sum_{k=0}^Na_kAs_k\mathrm{e}^{st}=0\]
+
+\[\sum_{k=0}^Na_ks_k=0\quad N \ \mathrm{roots} \ s_i(i=1,2,...,N)\]
+
+\[y_h(t)=A_1\mathrm{e}^{s_1t}+A_2\mathrm{e}^{s_2t}+...+A_N\mathrm{e}^{s_Nt}\]
+
+<h4 id="auxiliary-conditions">Auxiliary Conditions</h4>
+
+\[y(t_0),\frac{\mathrm{d}y(t_0)}{\mathrm{d}t},...,\frac{\mathrm{d}^{N-1}y(t_0)}{\mathrm{d}t^{N-1}}\]
+
+<h4 id="initial-rest-condition">Initial Rest Condition</h4>
+
+\[y(t_0)=\frac{\mathrm{d}y(t_0)}{\mathrm{d}t}=...=\frac{\mathrm{d}^{N-1}y(t_0)}{\mathrm{d}t^{N-1}}=0\]
+
+<h2 id="nth-order-linear-constant-coefficient-difference-equations">Nth-order Linear Constant-coefficient Difference Equations</h2>
+
+\[\sum_{k=0}^Na_ky[n-k]=\sum_{k=0}^Nb_kx[n-k]\quad\mathrm{solution}\quad y_p[t]+y_h[t]\]
+
+<h4 id="homogeneous-1">Homogeneous</h4>
+
+\[\sum_{k=0}^Na_ky[n-k]=\=0\quad\mathrm{solution}\quad y_h[n]\]
+
+<h4 id="guess-solution-1">Guess solution</h4>
+
+\[y_h[n]=Az^{n}\]
+
+\[\sum_{k=0}^Na_kAz^nz^{-k}=0\]
+
+\[\sum_{k=0}^Na_kz^{-k}=0\quad N \ \mathrm{roots} \ z_i(i=1,2,...,N)\]
+
+\[y_h[n]=A_1z_1^n+A_2z_2^n+...+A_Nz_N^n\]
+
+<h4 id="auxiliary-conditions-1">Auxiliary Conditions</h4>
+
+\[y[n_0],y[n_0-1],...y[n_0-N+1]\]
+
+<h4 id="recursive-equation---infinite-impulse-response-iir-systems">Recursive Equation - Infinite Impulse Response (IIR) Systems</h4>
+
+\[y[n]=\frac{1}{a_0}\left\{\sum_{k-0}^Mb_kx[n-k]-\sum_{k=1}^Na_ky[n-k]\right\}\]
+
+<p>It specifies a recursive procedure for determining the output in terms of the input and previous outputs.</p>
+
+<ul>
+  <li>Recursion: the determination of a succession of elements (such as numbers or functions) by operation on one or more preceding elements according to a rule or formula involving a finite number of steps.</li>
+</ul>
+
+<h4 id="nonrecursive-equation---finite-impulse-response-fir-systems">Nonrecursive Equation - Finite Impulse Response (FIR) Systems</h4>
+
+\[y[n]=\sum_{k=0}^M\left(\frac{b_k}{a_0}\right)x[n-k]\]
+
+<h4 id="block-diagram-representations">Block Diagram Representations</h4>
+
+<h2 id="singularity-functions">Singularity Functions</h2>
+
+<p>This part relate the convolution and differentiation/integration together. And the tool is the singularity function.</p>
+
+<h3 id="operational-definition-of-singularity-function---differentiator--integrator">Operational definition of singularity function - differentiator \&amp; integrator</h3>
+
+<p>Singular functions can be defined operationally in terms of its behavior under convolution.</p>
+
+<p>Belows are the examples of operational definitions of singularity functions.</p>
+
+<h4 id="unit-impulse-deltat">Unit impulse $\delta(t)$</h4>
+
+\[x(t)=x(t)*\delta(t)\]
+
+<h4 id="unit-doublet-u_1t">Unit doublet $u_1(t)$</h4>
+
+\[y_1(t)=\frac{\mathrm{d}x(t)}{\mathrm{d}t}=x(t)*u_1(t)\]
+
+<p>Similarly, we can define a $u_2(t)$:</p>
+
+\[y_2(t)=\frac{\mathrm{d}^2x(t)}{\mathrm{d}t^2}=x(t)*u_2(t)\]
+
+<p>It is easy to find that:</p>
+
+\[y_2(t)=\frac{\mathrm{d}^2x(t)}{\mathrm{d}t^2}=\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\mathrm{d}x(t)}{\mathrm{d}t}\right)=(x(t)*u_1(t))*u_1(t)\]
+
+<p>Then</p>
+
+\[u_2(t)=u_1(t)*u_1(t)\]
+
+<h3 id="cascades-of-differentiators-u_kt-of-order-k">Cascades of differentiators $u_{k}(t)$ of order $k$</h3>
+
+<p>$u_k(t)$ (k&gt;0) is the kth derivative of $\delta(t)$ and thus is the impulse response of a system that takes the kth derivative of the input.</p>
+
+\[u_k(t)=u_1(t)*...(k \ \mathrm{times})...*u_1(t)\]
+
+<h3 id="cascades-of-integrators-u_-kt-of-order-k">Cascades of integrators $u_{-k}(t)$ of order $k$</h3>
+
+<p>An integrator:</p>
+
+\[y(t)=\int_{-\infty}^{t}x(\tau)\mathrm{d}\tau\]
+
+<p>Then we can use the character of integrator to represent a unit step impulse response:</p>
+
+\[u(t)=\int_{-\infty}^{t}\delta(\tau)\mathrm{d}\tau\]
+
+<p>Then the following operation definition of $u(t)$ (operate on an input $x(t)$:</p>
+
+\[x(t)*u(t)=\int_{-\infty}^{t}x(\tau)\mathrm{d}\tau\]
+
+<p>Similarly, define a system of a cascade of two integrators:</p>
+
+\[u_{-2}(t)=u(t)*u(t)=\int_{-\infty}^{t}u(\tau)\mathrm{d}\tau\]
+
+<p>By the way, since $u(t)$ is a unit step impulse response, here is the \emph{<em>unit ramp function</em>}:</p>
+
+\[u_{-2}(t)=tu(t)\]
+
+<p>And we get the cascades of integrators:</p>
+
+\[u_{-k}(t)=u(t)*...(k \ \mathrm{times})...*u(t)=\int_{-\infty}^tu_{-(k-1)}(\tau)\mathrm{d}\tau\]
+
+\[\delta(t)=u_0(t)\]
+
+\[u(t)=u_{-1}(t)\]
+
+\[u_k(t)*u_r(t)=u_{k+r}(t)\]
+
+<h4 id="invertibility-utu_1tu_-1tu_1tdeltat">Invertibility $u(t)<em>u_1(t)=u_{-1}(t)</em>u_1(t)=\delta(t)$</h4>
+
+<h1 id="fourier-series-representation-of-periodic-signals">Fourier Series Representation of Periodic Signals</h1>
+
+<h4 id="tigonometric-sum-sums-of-harmonically-related-sines-and-cosines-or-periodic">Tigonometric sum Sums of harmonically related sines and cosines or periodic</h4>
+
+<p>complex exponentials.</p>
+
+<h2 id="response-of-lti-systems-to-complex-exponentials">Response of LTI Systems to Complex Exponentials</h2>
+
+<p>The response of an LTI system to a complex exponential input is the same complex</p>
+
+<p>exponential with only a change in amplitude.</p>
+
+\[\mathrm{contunuous \ time} \quad e^{st}\longrightarrow H(s)e^{st}\]
+
+\[\mathrm{discrete \ time} \quad z^n \longrightarrow H(z)z^n\]
+
+\[y(t)=\int_{-\infty}^{+\infty}h(\tau)x(t-\tau)\mathrm{d}\tau=\int_{-\infty}^{+\infty}h(\tau)\mathrm{e}^{s(t-\tau)}\mathrm{d}\tau\]
+
+\[y(t)=e^{st}\int_{-\infty}^{+\infty}h(\tau)\mathrm{e}^{-s\tau}\mathrm{d}\tau\]
+
+<p>Assuming that the integral on the RHS converges,</p>
+
+\[y(t)=H(s)e^{st}\]
+
+<p>Hence, we have shown that complex exponentials are eigenfunctions of LTI systems.The constant $H(s)$ for a specific value of $s$ bis then the eigenvalue associated with the eigenfunction $e^{st}$.</p>
+
+<p>\paragraph{Eigenfunction $e^{st}$} A signal for which the system output is a (possibly complex) constant times the input.</p>
+
+<h4 id="eigenvalue-hs-amplitude-constant">Eigenvalue $H(s)$ Amplitude (constant).</h4>
+
+<h4 id="system-functions">System Functions</h4>
+
+\[H(s)=\int_{-\infty}^{+\infty}h(\tau)\mathrm{e}^{-s\tau}\mathrm{d}\tau\]
+
+\[H(z)=\sum_{-\infty}^{+\infty}h[k]z^{-k}\]
+
+<h4 id="frequency-response-response-in-frequency-domain-mathcalres0rightarrow-sjomega">Frequency Response Response in frequency domain? $\mathcal{Re}{(s)}=0\rightarrow s=j\omega$</h4>
+
+\[H(j\omega)=\int_{-\infty}^{+\infty}h(t)\mathrm{e}^{-j\omega t}\mathrm{d}t\]
+
+\[H(\mathrm{e}^{j\omega})=\sum_{-\infty}^{+\infty}h[n]\mathrm{e}^{j\omega n}\]
+
+<h2 id="fourier-series">Fourier Series</h2>
+
+\[\mathrm{synthesis \ equation}\quad x(t)=\sum_{k=-\infty}^{+\infty}a_ke^{jk\omega_0t}=\sum_{k=-\infty}^{+\infty}a_ke^{jk(2\pi/T)t}\]
+
+<h4 id="fourier-series-coefficients--spectral-coefficients-of-xt">Fourier Series Coefficients / Spectral Coefficients of $x(t)$</h4>
+
+\[\mathrm{analysis \ equation}\quad a_k=\frac{1}{T}\int_Tx(t)e^{-jk\omega_0t}\mathrm{d}T=\frac{1}{t}\int_Tx(t)e^{-jk(2\pi/T)t}\mathrm{d}t\]
+
+<h4 id="fundamental-harmonic-componentfirst-harmonic-components-xt-when-kpm-1">Fundamental Harmonic Component/First Harmonic Components $x(t)$ when $k=\pm 1$</h4>
+
+<h4 id="nth-harmonic-components-xt-when-kpm-n">Nth Harmonic Components $x(t)$ when $k=\pm N$</h4>
+
+\[a_0=\frac{1}{T}\int_Tx(t)\mathrm{d}t\]
+
+<h4 id="real-periodic-signals-a_ka_k">Real Periodic Signals $a_k=A_k$</h4>
+
+\[x(t)=a_0+2\sum_{k=1}^\infty A_k\cos (k\omega_0t+\theta_k)\]
+
+<h4 id="complex-periodic-signals-a_kb_kjc_k">Complex Periodic Signals $a_k=B_k+jC_k$</h4>
+
+\[x(t)=a_0+2\sum_{k=1}^\infty[B_k\cos k\omega_0t-C_k\sin k\omega_0t]\]
+
+<h4 id="periodic-square-wave">Periodic Square Wave</h4>
+
+\[a_0=\frac{2T_1}{T}\quad k=0\]
+
+\[a_k=\frac{\sin (k\omega_0T_1)}{k\pi}\quad k\neq 0\]
+
+<h2 id="convergence-conditions-of-the-fourier-series">Convergence Conditions of the Fourier Series</h2>
+
+<h4 id="finite-energy-over-a-single-period">Finite Energy over a Single Period</h4>
+
+\[\int_T|x(t)|^2\mathrm{d}t&lt;\infty\]
+
+<h4 id="dirichlet-conditions">Dirichlet Conditions</h4>
+
+<ul>
+  <li>Condition 1: Over any period, $x(t)$ must be absolutely integrable; this guarantees that each coefficient ak will be finite.</li>
+</ul>
+
+\[\int_T|x(t)|\mathrm{d}t&lt;\infty\]
+
+<ul>
+  <li>
+    <p>Condition 2: In any finite interval of time, $x(t)$ is of bounded variation; that is, there are no more than a finite number of maxima and minima during any single period of the signal.</p>
+  </li>
+  <li>
+    <p>Condition 3: In any finite interval of time, there are only a finite number of discontinuities. Furthermore, each of these discontinuities is finite.</p>
+  </li>
+</ul>
+
+<h4 id="gibbs-phenomenon">Gibbs Phenomenon</h4>
+
+<h2 id="properties-of-continuous-time-fourier-series">Properties of Continuous-time Fourier Series</h2>
+
+<p>Same period $T$</p>
+
+\[x(t)\stackrel{\mathcal{FS}}\longleftrightarrow a_k\]
+
+\[y(t)\stackrel{\mathcal{FS}}\longleftrightarrow b_k\]
+
+<h4 id="linearity-1">Linearity</h4>
+
+\[Ax(t)+By(t)\stackrel{\mathcal{FS}}\longleftrightarrow Aa_k+Bb_k\]
+
+<h4 id="time-shifting">Time Shifting</h4>
+
+\[x(t-t_0)\stackrel{\mathcal{FS}}\longleftrightarrow a_k\mathrm{e}^{-jk\omega_0t_0}=a_ke^{-jk(2\pi/T)t_0}\]
+
+<h4 id="frequency-shifting">Frequency Shifting</h4>
+
+\[e^{jM\omega_0t}x(t)=e^{jM(2\pi/T)t}x(t)\stackrel{\mathcal{FS}}\longleftrightarrow a_{k-M}\]
+
+<h4 id="conjugation">Conjugation</h4>
+
+\[x^*(t)\stackrel{\mathcal{FS}}\longleftrightarrow a^*_{-k}\]
+
+<h4 id="time-reversal-1">Time Reversal</h4>
+
+\[x(-t)\stackrel{\mathcal{FS}}\longleftrightarrow a_{-k}\]
+
+<h4 id="time-scaling-alpha0-xalpha-tlongleftrightarrow-talphaquadalphaomega_0">Time Scaling $\alpha&gt;0$, $x(\alpha t)\longleftrightarrow T/\alpha\quad\alpha\omega_0$</h4>
+
+\[x(\alpha t)=\sum_{k=-\infty}^{+\infty}a_k\mathrm{e}^{jk\alpha\omega_0t}\stackrel{\mathcal{FS}}\longleftrightarrow a_{k}\]
+
+<h4 id="periodic-convolution">Periodic Convolution</h4>
+
+\[\int_Tx(\tau)y(t-\tau)\mathrm{d}\tau\stackrel{\mathcal{FS}}\longleftrightarrow Ta_kb_k\]
+
+<h4 id="multiplication">Multiplication</h4>
+
+<p>Discrete-time convolution of the sequence representing the Fourier coefficients of $x(t)$ and the sequence representing the Fourier coefficients of $y(t)$.</p>
+
+\[x(t)y(t)\stackrel{\mathcal{FS}}\longleftrightarrow \sum_{l=-\infty}^{+\infty} a_lb_{k-l}\]
+
+<h4 id="differentiation">Differentiation</h4>
+
+\[\frac{\mathrm{d}x(t)}{\mathrm{d}t}\stackrel{\mathcal{FS}}\longleftrightarrow jk\omega_0a_k=jk\frac{2\pi}{T}a_k\]
+
+<h4 id="integration-finite-valued-and-periodic-only-if-a_00">Integration Finite valued and periodic only if $a_0=0$.</h4>
+
+\[\int_{-\infty}^tx(t)\mathrm{d}t\stackrel{\mathcal{FS}}\longleftrightarrow \left(\frac{1}{jk\omega_0}\right)a_k=\left(\frac{1}{jk(2\pi/T)}\right)a_k\]
+
+<h4 id="conjugate-symmetry-for-real-signals">Conjugate symmetry for Real Signals</h4>
+
+<p>$x(t)$ real $x(t)=x^*(t)$.</p>
+
+\[a_k=a_{-k}^*\]
+
+\[\mathcal{Re}\{a_k\}=\mathcal{Re}\{a_{-k}\}\]
+
+\[\mathcal{Im}\{a_k\}=-\mathcal{Im}\{a_{-k}\}\]
+
+\[|a_k|=|a_{-k}|\]
+
+\[\arg a_k=-\arg a_{-k}\]
+
+<h4 id="real-and-even-signals">Real and Even Signals</h4>
+
+<p>$x(t)$ real and even, $a_k$ real and even.</p>
+
+<h4 id="real-and-odd-signals">Real and Odd Signals</h4>
+
+<p>$x(t)$ real and odd, $a_k$ purely imaginary and odd.</p>
+
+<h4 id="even-odd-decomposition-of-real-signals">Even-Odd Decomposition of Real Signals</h4>
+
+\[\begin{cases}
+
+x_e(t)=\mathcal{Ev}\{x(t)\} \ [x(t) \ \mathrm{real}]&amp; \mathcal{Re}\{a_k\}\\
+
+x_o(t)=\mathcal{Od}\{x(t)\} \ [x(t) \ \mathrm{real}]&amp; j\mathcal{Im}\{a_k\}
+
+\end{cases}\]
+
+<h4 id="parsevals-relation-for-continuous-time-periodic-signals">Parseval’s Relation for Continuous-Time Periodic Signals</h4>
+
+<p>$|a_k|^2$ is the average power in the $k$th harmonic component of $x(t)$. Thus, what Parseval’s relation states is that the total average power in a periodic signal equals the sum of the average powers in all of its harmonic components.</p>
+
+\[\frac{1}{T}\int_T|x(t)|^2\mathrm{d}t=\frac{1}{T}\int_T|a_ke^{jk\omega_0t}|^2\mathrm{d}t=\sum_{k=-\infty}^{+\infty}|a_k|^2\]
+
+<h4 id="impulse-train">Impulse Train</h4>
+
+\[x(t)=\sum_{k=-\infty}^{+\infty}\delta(t-kT)\]
+
+<h4 id="discrete-time-fourier-series">Discrete-time Fourier Series</h4>
+
+\[\phi_k[n]=\mathrm{e}^{jk\omega_0n}=\mathrm{e}^{jk(2\pi/T)n},k=0,\pm 1,\pm 2,...\]
+
+\[\phi_k[n]=\phi_{k+rN}[n]\]
+
+\[\mathrm{synthesis \ equation}\quad x[n]=\sum_{k=\langle N\rangle}a_k\phi(n)=\sum_{k=\langle N\rangle}a_k\mathrm{e}^{jk\omega_0n}=\sum_{k=\langle N\rangle}a_k\mathrm{e}^{jk(2\pi/T)n}\]
+
+\[\mathrm{analysis \ equation}\quad a_k=\frac{1}{N}\sum_{n=\langle N\rangle}x[n]\mathrm{e}^{-jk\omega_0n}=\frac{1}{N}\sum_{n=\langle N\rangle}x[n]\mathrm{e}^{-jk(2\pi/N)n}\]
+
+<h4 id="first-difference">First Difference</h4>
+
+\[x[n]-x[n-1]\stackrel{\mathcal{FS}}\longleftrightarrow(1-\mathrm{e}^{-jk(2\pi/N)})a_k\]
+
+<h4 id="parsevals-relation">Parseval’s Relation</h4>
+
+<p>Parseval’s relation states that the average power in a periodic signal equals the sum of the average powers in all of its harmonic components.</p>
+
+\[\frac{1}{N}\sum_{n=\langle N\rangle}|x[n]|^2=\sum_{k=\langle N\rangle}|a_k|^2\]
+
+<h2 id="filtering">Filtering</h2>
+
+<h4 id="filtering-1">Filtering</h4>
+
+<p>Fhange the relative amplitudes of the frequency components in a signal or perhaps eliminate some frequency components entirely.</p>
+
+<ul>
+  <li>
+    <p>Frequency-shaping Filters: Linear time-invariant systems that change the shape of the spectrum.</p>
+  </li>
+  <li>
+    <p>Frequency-selective Filters: Systems that are designed to pass some frequencies essentially undistorted and significantly attenuate or eliminate others.</p>
+  </li>
+</ul>
+
+\[x(t)=\sum_ka_ke^{s_kt}\longrightarrow y(t)=\sum_ka_kH(s_k)e^{s_kt}\]
+
+\[x[n]=\sum_ka_kz_k^n\longrightarrow y[n]=\sum_ka_kH(z_k)z_k^n\]
+:ET

@@ -1,0 +1,68 @@
+I"	<p>Reference: Boyd, Stephen, Stephen P. Boyd, and Lieven Vandenberghe. <em>Convex optimization</em>. Cambridge university press, 2004.</p>
+
+<p><img src="https://live.staticflickr.com/65535/52213287116_9a61f2835f_o.png" alt="Screen Shot 2022-07-13 at 11.43.47 AM" /></p>
+
+<hr />
+
+<h4 id="mathematical-optimization-problem">Mathematical optimization problem</h4>
+
+<p>$\begin{array}{ll}
+\operatorname{minimize} &amp; f_{0}(x) <br />
+\text {subject to } &amp; f_{i}(x) \leq b_{i}, \quad i=1, \ldots, m
+\end{array}$</p>
+
+<p><strong>Optimization variable</strong> $x=(x_1, \ldots, x_n)$</p>
+
+<p><strong>Objective function</strong> $f_{0}: \mathbf{R}^{n} \rightarrow \mathbf{R}$</p>
+
+<p><strong>Constraint functions</strong>  $f_{i}: \mathbf{R}^{n} \rightarrow \mathbf{R}, \quad i=1, \ldots, m$</p>
+
+<p><strong>Limits/bounds for the constraints</strong>  $b_1, \ldots, b_m$</p>
+
+<p><strong>Optimal vector / solution</strong> $x^\star$</p>
+
+<h4 id="linear-program">Linear program</h4>
+
+<p>If  objective and constraint functions $f_0, \ldots, f_m$ are linear.</p>
+
+\[f_{i}(\alpha x+\beta y)=\alpha f_{i}(x)+\beta f_{i}(y) \ \text{for all} \ x, y\in\mathbb{R}^n\ \text{and all} \ \alpha, \beta\in\mathbb{R}\]
+
+\[\begin{array}{ll}
+\operatorname{minimize} &amp; c^{T} x \\
+\text { subject to } &amp; a_{i}^{T} x \leq b_{i}, \quad i=1, \ldots, m
+\end{array}\]
+
+<p>Here the vector $c, a_{1}, \ldots, a_{m} \in \mathbf{R}^{n}$ and the scalar $b_{1}, \ldots, b_{m} \in \mathbf{R}$ are problem parameters that specify the objective and constraint functions.a</p>
+
+<h4 id="nonlinear-program">Nonlinear program</h4>
+
+<p>If not above but not convex.</p>
+
+<h4 id="convex-optimization-problems">Convex optimization problems</h4>
+
+\[f_{i}(\alpha x+\beta y) \leq \alpha f_{i}(x)+\beta f_{i}(y)$ for all $x, y\in\mathbb{R}^n$ And all $\alpha, \beta\in\mathbb{R}$ with $\alpha+\beta=1, \alpha \geq 0, \beta \geq 0\]
+
+<p>We can consider convex optimization to be a generalization of linear programming.</p>
+
+<h5 id="application">Application</h5>
+
+<p>The optimization problem is an abstraction of the problem of making the best possible choice of a vector in $R^n$ from a set of candidate choices.</p>
+
+<h4 id="least-squares-problems">Least-squares problems</h4>
+
+<p>A least-squares problem is an optimization problem with <strong>no constraints</strong> and an objective which is a sum of squares of terms of the form $a_{i}^{T} x-b_{i}$:</p>
+
+\[\operatorname{minimize} \quad f_{0}(x)=\|A x-b\|_{2}^{2}=\sum_{i=1}^{k}\left(a_{i}^{T} x-b_{i}\right)^{2} .\]
+
+<p>Here $A \in \mathbf{R}^{k \times n} \text { (with } k \geq n \text { ) }$, $a_i^T$ are the rows of $A$, vector $x\in R$ is the optimization variable.</p>
+
+\[\left(A^{T} A\right) x=A^{T} b\]
+
+\[x=\left(A^{T} A\right)^{-1} A^{T} b\]
+
+<p><strong>Rocognizing least-squares problem</strong> the objective is a quadratic function; the associated quadratic form is positive semideﬁnite.</p>
+
+<p><strong>Weighted least-squares</strong> $\sum_{i=1}^{k} w_{i}\left(a_{i}^{T} x-b_{i}\right)^{2}$, where $w_{1}, \ldots, w_{k}$ are positive, is minimized.</p>
+
+<p><strong>Regularization</strong> $\sum_{i=1}^{k}\left(a_{i}^{T} x-b_{i}\right)^{2}+\rho \sum_{i=1}^{n} x_{i}^{2}$ Where $\rho&gt;0$. Regularization comes up in statistical estimation when the vector x to be estimated is given a prior distribution.</p>
+:ET

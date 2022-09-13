@@ -1,0 +1,18 @@
+I"X<p><img src="https://s2.loli.net/2022/07/21/1qrwtM6FWb4fY5l.png" alt="image-20220720185238778" /></p>
+
+<h4 id="source-model">Source Model</h4>
+
+<p>The source is assumed to produce symbols at a rate of $R$ symbols per second.</p>
+
+<h4 id="preﬁx-condition-code--instantaneous-code">preﬁx-condition code / instantaneous code</h4>
+
+<p>An important property of such codewords is that none can be the same as the ﬁrst portion of another, longer, codeword—otherwise the same bit pattern might result from two or more diﬀerent messages, and there would be ambiguity.</p>
+
+<h4 id="kraft-inequality">Kraft Inequality</h4>
+
+<p><img src="https://s2.loli.net/2022/07/21/ceIPgG7lZ59bphX.png" alt="image-20220720194941918" /></p>
+
+<p>$L$: Length of code</p>
+
+<p><img src="https://s2.loli.net/2022/07/21/bOUMa92ZRfvj7oW.png" alt="image-20220720213827001" /></p>
+:ET

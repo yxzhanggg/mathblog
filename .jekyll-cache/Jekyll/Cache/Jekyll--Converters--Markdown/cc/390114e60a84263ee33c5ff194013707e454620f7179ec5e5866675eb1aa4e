@@ -1,0 +1,408 @@
+I"�=<h4 id="eigenvectors">Eigenvectors</h4>
+
+<p>Certain exceptional vectors $x$ are in the same direction as $Ax$.</p>
+
+\[A \boldsymbol{x}=\lambda \boldsymbol{x}\]
+
+<p><img src="https://live.staticflickr.com/65535/52204094088_0c3a8d4706_o.png" alt="Screen Shot 2022-07-09 at 1.26.33 PM" /></p>
+
+<h4 id="eigenvalues">Eigenvalues</h4>
+
+<ol>
+  <li><strong>Markov matrix</strong>: Each column of $P$ adds to 1 , so $\lambda=1$ is an eigenvalue.</li>
+  <li>The matrix is singular, so $\lambda=0$ is an eigenvalue.</li>
+</ol>
+
+<h5 id="projection">Projection</h5>
+
+\[\lambda=1 \text { and } 0\]
+
+<h5 id="permutation">Permutation</h5>
+
+\[|\lambda|=1\]
+
+<h5 id="reflection">Reflection</h5>
+
+\[\lambda=1 \text { and } -1\]
+
+\[\text { reflection }=2(\text { projection })-I\]
+
+\[\text { When a matrix is shifted by } I \text {, each } \lambda \text { is shifted by } 1 \text {. No change in eigenvectors. }\]
+
+<p><img src="https://live.staticflickr.com/65535/52204295846_16bda204c3_o.png" alt="Screen Shot 2022-07-09 at 4.04.42 PM" /></p>
+
+<h4 id="calculation-to-get-eigenvalues-and-eigenvectors">Calculation to get eigenvalues and eigenvectors</h4>
+
+<ol>
+  <li>Compute the determinant of $A-\lambda I$. With $\lambda$ subtracted along the diagonal, this determinant starts with $\lambda^{n}$ or $-\lambda^{n}$. It is a polynomial in $\lambda$ of degree $n$.</li>
+  <li>Find the roots of this polynomial, by solving $\operatorname{det}(A-\lambda I)=0$. The $n$ roots are the $n$ eigenvalues of $A$. They make $A-\lambda I$ singular.</li>
+  <li>For each eigenvalue $\lambda$, solve $(A-\lambda I) \boldsymbol{x}=\mathbf{0}$ to find an eigenvector $\boldsymbol{x}$.</li>
+</ol>
+
+\[\lambda_{1}\lambda_{2}\cdots\lambda_{n}=\operatorname{determinant}\]
+
+<h4 id="trace">trace</h4>
+
+\[\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}=\operatorname{trace}=a_{11}+a_{22}+\cdots+a_{n n}\]
+
+<h4 id="symmetric-matrix">symmetric matrix</h4>
+
+<p>real number</p>
+
+\[S^{\mathrm{T}}=S\]
+
+<h4 id="skew-symmetric-matrix">skew-symmetric matrix</h4>
+
+<p>imaginary number</p>
+
+\[A^{\mathrm{T}}=-A\]
+
+<h4 id="orthogonal-matrix">orthogonal matrix</h4>
+
+\[\text{complex number with}|\lambda|=1\]
+
+\[Q^{\mathrm{T}} Q=I\]
+
+\[A \text { and } B \text { share the same } \boldsymbol{n} \text { independent eigenvectors if and only if } \boldsymbol{A B}=\boldsymbol{B A} \text {. }\]
+
+<h1 id="diagonalization-factorization">Diagonalization (factorization)</h1>
+
+<h4 id="eigenvector-matrix-x">Eigenvector matrix $X$</h4>
+
+<h4 id="eigenvalue-matrix-lambda">Eigenvalue matrix $\Lambda$</h4>
+
+\[X^{-1} A X=\Lambda=\left[\begin{array}{lll}
+\lambda_{1} &amp; &amp; \\
+&amp; \ddots &amp; \\
+&amp; &amp; \lambda_{n}
+\end{array}\right]\]
+
+\[A X=X \Lambda \quad \text { is } \quad \boldsymbol{X}^{-1} \boldsymbol{A} \boldsymbol{X}=\boldsymbol{\Lambda} \quad \text { or } \quad \boldsymbol{A}=\boldsymbol{X} \boldsymbol{\Lambda} \boldsymbol{X}^{-1}\]
+
+<p>Each eigenvalue has at least one eigenvector.</p>
+
+<ul>
+  <li><strong>Invertibility</strong> is concerned with the eigenvalues $(\lambda=0$ or $\lambda \neq 0) .$</li>
+  <li><strong>Diagonalizability</strong> is concerned with the eigenvectors (too few or enough for $X$ ).</li>
+</ul>
+
+<h4 id="independent-boldsymbolx-from-different-lambda">Independent $\boldsymbol{x}$ from different $\lambda$</h4>
+
+<p>Eigenvectors $x_{1}, \ldots, \boldsymbol{x}_{j}$ that correspond to distinct (all different) eigenvalues are linearly independent. An $n$ by $n$ matrix that has $n$ different eigenvalues (no repeated $\lambda$ ‘s) must be diagonalizable.</p>
+
+<h4 id="similar-matrices">Similar Matrices</h4>
+
+<ul>
+  <li>Same Eigenvalues</li>
+</ul>
+
+\[A=X \Lambda X^{-1}\]
+
+<ul>
+  <li>all invertible matrices $B$</li>
+</ul>
+
+\[A=B C B^{-1}\]
+
+<h4 id="follow-the-eigenvectors">Follow the eigenvectors</h4>
+
+<p>Decomposite the vecotors into combination of eigenvecotors, and every transformation make the eigenvectors grow by eigenvalues.</p>
+
+\[\boldsymbol{u}_{0}=c_{1} \boldsymbol{x}_{1}+\cdots+c_{n} \boldsymbol{x}_{n}\]
+
+\[\boldsymbol{u}_{k}=c_{1}\left(\lambda_{1}\right)^{k} \boldsymbol{x}_{1}+\cdots+c_{n}\left(\lambda_{n}\right)^{k} \boldsymbol{x}_{n}\]
+
+\[A^{k} u_{0}=X \Lambda^{k} X^{-1} u_{0}=X \Lambda^{k} c=\left[\begin{array}{lll}
+x_{1} &amp; \ldots &amp; x_{n} 
+\end{array}\right]\left[\begin{array}{ccc}
+\left(\lambda_{1}\right)^{k} &amp; &amp; \\
+&amp; \ddots &amp; \\
+&amp; &amp; \left(\lambda_{n}\right)^{k}
+\end{array}\right]\left[\begin{array}{c}
+c_{1} \\
+\vdots \\
+c_{n}
+\end{array}\right]\]
+
+<h4 id="geometric-multiplicity-gm">Geometric Multiplicity GM</h4>
+
+<p>Number of independent eigenvectors for specific $\lambda$.</p>
+
+<p>Then GM is the dimension of the nullspace of $A-\lambda I$.</p>
+
+<h4 id="algebraic-multiplicity--am">Algebraic Multiplicity = AM</h4>
+
+<p>number of repetitions of specific $\lambda$,</p>
+
+<p>$n$ roots of $\operatorname{det}(A-\lambda I)=0$.</p>
+
+<h4 id="diagonalizability">Diagonalizability</h4>
+
+<p>$A$ is diagonalizable if every eigenvalue has enough eigenvectors (GM= AM)</p>
+
+<h1 id="systems-of-differential-equations">Systems of Differential Equations</h1>
+
+<p>Choose $\boldsymbol{u}=e^{\lambda t} \boldsymbol{x}$ when $\boldsymbol{A x}=\boldsymbol{\lambda} \boldsymbol{x}$</p>
+
+\[\frac{d u}{d t}=A \boldsymbol{u}=A e^{\lambda t} \boldsymbol{x}=\lambda e^{\lambda t} \boldsymbol{x}\]
+
+<ol>
+  <li>Write $\boldsymbol{u}(0)$ as a combination $c_{1} \boldsymbol{x}<em>{1}+\cdots+c</em>{n} \boldsymbol{x}_{n}$ of the eigenvectors of $\boldsymbol{A}$.</li>
+  <li>Multiply each eigenvector $x_{i}$ by its <strong>growth factor</strong> $e^{\lambda_{i} t}$.</li>
+  <li>The solution is the same combination of those pure solutions $e^{\lambda t} \boldsymbol{x}$ :</li>
+</ol>
+
+\[\frac{d u}{d t}=A u \quad u(t)=c_{1} e^{\lambda_{1} t} x_{1}+\cdots+c_{n} e^{\lambda_{n} t} x_{n}\]
+
+<h2 id="second-order">Second order</h2>
+
+\[m \frac{d^{2} y}{d t^{2}}+b \frac{d y}{d t}+k y=0 \quad \text { becomes } \quad\left(m \lambda^{2}+b \lambda+k\right) e^{\lambda t}=0\]
+
+\[m=1\]
+
+\[\begin{aligned}
+&amp;\boldsymbol{d} \boldsymbol{y} / \boldsymbol{d} t=\boldsymbol{y}^{\prime} \\
+&amp;\boldsymbol{d} \boldsymbol{y}^{\prime} / \boldsymbol{d} t=-\boldsymbol{k} y-\boldsymbol{b} \boldsymbol{y}^{\prime}
+\end{aligned} \quad \text { converts to } \quad \frac{d}{d t}\left[\begin{array}{c}
+y \\
+y^{\prime}
+\end{array}\right]=\left[\begin{array}{rr}
+\mathbf{0} &amp; \mathbf{1} \\
+-\boldsymbol{k} &amp; -\boldsymbol{b}
+\end{array}\right]\left[\begin{array}{c}
+y \\
+y^{\prime}
+\end{array}\right]=A \boldsymbol{u} .\]
+
+\[A-\lambda I=\left[\begin{array}{cc}
+-\lambda &amp; 1 \\
+-k &amp; -b-\lambda
+\end{array}\right] \quad \text { has determinant } \quad \lambda^{2}+b \lambda+k=0\]
+
+\[\boldsymbol{x}_{1}=\left[\begin{array}{c}
+1 \\
+\lambda_{1}
+\end{array}\right] \quad \boldsymbol{x}_{2}=\left[\begin{array}{c}
+1 \\
+\lambda_{2}
+\end{array}\right] \quad \boldsymbol{u}(t)=c_{1} e^{\lambda_{1} t}\left[\begin{array}{c}
+1 \\
+\lambda_{1}
+\end{array}\right]+c_{2} e^{\lambda_{2} t}\left[\begin{array}{c}
+1 \\
+\lambda_{2}
+\end{array}\right]\]
+
+<h2 id="defference-equations">Defference equations</h2>
+
+<p><img src="https://live.staticflickr.com/65535/52207815305_4f5d16f24f_o.png" alt="Screen Shot 2022-07-10 at 10.05.10 PM" /></p>
+
+<p><img src="https://live.staticflickr.com/65535/52207620489_67eea11c42_o.png" alt="Screen Shot 2022-07-10 at 10.19.41 PM" /></p>
+
+<p><img src="https://live.staticflickr.com/65535/52207359131_b11e7ca0f7_o.png" alt="Screen Shot 2022-07-10 at 10.23.41 PM" /></p>
+
+<p>real below, imaginary above the parabola</p>
+
+<h1 id="matrix-exponential">Matrix exponential</h1>
+
+\[e^{x}=1+x+\frac{1}{2} x^{2}+\frac{1}{6} x^{3}+\cdots\]
+
+\[e^{A t}=I+A t+\frac{1}{2}(A t)^{2}+\frac{1}{6}(A t)^{3}+\cdots\]
+
+<p>take derivative w.r.t. $t$:</p>
+
+\[A+A^{2} t+\frac{1}{2} A^{3} t^{2}+ \cdots=A e^{A t}\]
+
+<p>Its <strong>eigenvalues</strong> are $e^{\boldsymbol{\lambda} t}$</p>
+
+\[e^{A t}x=e^{\lambda t}x\]
+
+\[\left(I+A t+\frac{1}{2}(A t)^{2}+\cdots\right) \boldsymbol{x}=\left(1+\lambda t+\frac{1}{2}(\lambda t)^{2}+\cdots\right) \boldsymbol{x}\]
+
+<ol>
+  <li>$e^{A t}$ always has the inverse $e^{-A t}$.</li>
+  <li>The eigenvalues of $e^{A t}$ are always $e^{\lambda t}$.</li>
+  <li>When $A$ is antisymmetric, $e^{A t}$ is orthogonal. Inverse $=$ transpose $=e^{-A t}$.</li>
+</ol>
+
+<h2 id="find-boldsymbolutea-t-boldsymbolu0">find $\boldsymbol{u}(t)=e^{A t} \boldsymbol{u}(0)$</h2>
+
+\[e^{A t}=X e^{\Lambda t} X^{-1}\]
+
+<ol>
+  <li>
+    <p>$\boldsymbol{u}(0)=c_1 \boldsymbol{x}_1+\cdots+c_n \boldsymbol{x}_n=X \boldsymbol{c}$. Here we need $n$ independent eigenvectors.</p>
+  </li>
+  <li>
+    <p>Multiply each $\boldsymbol{x}<em>i$ by its growth factor $e^{\lambda</em>{i} t}$ to follow it forward in time.</p>
+  </li>
+  <li>
+    <p>The best form of $e^{A t} \boldsymbol{u}(0)$ is</p>
+
+\[\boldsymbol{u}(t)=\boldsymbol{c}_\boldsymbol{1} e^{\lambda_\boldsymbol{1} t} \boldsymbol{x}_\boldsymbol{1}+\cdots+\boldsymbol{c}_\boldsymbol{n} e^{\lambda_n t} \boldsymbol{x}_\boldsymbol{n}\]
+  </li>
+</ol>
+
+<p>It is a short form solution compatible with the original one ($u(t)=c_{1} e^{\lambda_{1} t} x_{1}+\cdots+c_{n} e^{\lambda_{n} t} x_{n}$),</p>
+
+\[e^{A t} u(0)=X e^{\Lambda t} X^{-1} u(0)=\left[\begin{array}{lll}
+\boldsymbol{x}_{1} &amp; \cdots &amp; \boldsymbol{x}_{n} 
+\end{array}\right]\left[\begin{array}{ccc}
+e^{\lambda_{1} t} &amp; &amp; \\
+&amp; \ddots &amp; \\
+&amp; &amp; e^{\lambda_{n} t}
+\end{array}\right]\left[\begin{array}{c}
+c_{1} \\
+\vdots \\
+c_{n}
+\end{array}\right]\]
+
+<p>we can use it to find the solution when the eigenvectors are not enough to produce the solution in original form:</p>
+
+<p>(where the $t e^{t}$ comes from)</p>
+
+<h3 id="if-diagonalization-is-not-possible">if diagonalization is not possible</h3>
+
+<p>there are repeated eigenvalues and less eigenvectors. we cannot express solution as:</p>
+
+\[u(t)=c_{1} e^{\lambda_{1} t} x_{1}+\cdots+c_{n} e^{\lambda_{n} t} x_{n}\]
+
+<p>use series to express the solution:</p>
+
+\[e^{A t}=e^{I t} e^{(A-I) t}=e^{t}[I+(A-I) t]\]
+
+\[\left[\begin{array}{l}
+y \\
+y^{\prime}
+\end{array}\right]=e^{t}\left[I+\left[\begin{array}{ll}
+-1 &amp; 1 \\
+-1 &amp; 1
+\end{array}\right] t\right]\left[\begin{array}{r}
+y(0) \\
+y^{\prime}(0)
+\end{array}\right] \quad y(t)=e^{t} y(0)-t e^{t} y(0)+t e^{t} y^{\prime}(0)\]
+
+<h1 id="symmetric-matrices">Symmetric Matrices</h1>
+
+<ol>
+  <li>
+    <p>A symmetric matrix has only real eigenvalues.</p>
+  </li>
+  <li>
+    <p>The eigenvectors can be chosen orthonormal.</p>
+  </li>
+</ol>
+
+<h4 id="sq-lambda-qmathrmt">$S=Q \Lambda Q^{\mathrm{T}}$</h4>
+
+<h4 id="spectral-theorem--principal-axis-theorem">Spectral Theorem / Principal axis theorem</h4>
+
+\[\text{symmetric matrix=(orthonormal eigenvectors)(eigenvalue)(orthonormal eigenvectors)}^\mathrm{T}\]
+
+<p>Every symmetric matrix has the factoriztion $S=Q \Lambda Q^{\mathrm{T}}$ with real eigenvalues in $\Lambda$ and orthonormal eigenvectors in the columns of $Q$:</p>
+
+<p>Symmetric diagonalization $S=Q \Lambda Q^{-1}=Q \Lambda Q^{\mathrm{T}} \quad$ with $\quad Q^{-1}=Q^{\mathrm{T}}$</p>
+
+<h4 id="orthogonal-eigenvectors">Orthogonal Eigenvectors</h4>
+
+<p>Eigenvectors of a real symmetric matrix (when they correspond to different $\lambda$ ‘s) are always perpendicular.</p>
+
+<hr />
+
+<p>Every 2 by 2 symmetric matrix is <strong>(rotation)(stretch)(rotate back)</strong></p>
+
+\[S=Q \Lambda Q^{\mathrm{T}}=\left[\begin{array}{ll}
+\boldsymbol{q}_{1} &amp; \boldsymbol{q}_{2}
+\end{array}\right]\left[\begin{array}{ll}
+\lambda_{1} &amp; \\
+&amp; \lambda_{2}
+\end{array}\right]\left[\begin{array}{l}
+\boldsymbol{q}_{1}^{\mathrm{T}} \\
+\boldsymbol{q}_{2}^{\mathrm{T}}
+\end{array}\right]\]
+
+\[S=Q \Lambda Q^{\mathrm{T}}=\lambda_{1} q_{1} \boldsymbol{q}_{1}^{\mathrm{T}}+\cdots+\lambda_{n} \boldsymbol{q}_{n} \boldsymbol{q}_{n}^{\mathrm{T}}\]
+
+<h4 id="complex-eigenvalues-of-real-matrices">Complex Eigenvalues of Real Matrices</h4>
+
+<p><img src="https://live.staticflickr.com/65535/52208559943_fc2734ff1c_o.png" alt="Screen Shot 2022-07-11 at 11.02.04 AM" /></p>
+
+<h4 id="eigenvalues-versus-pivots">Eigenvalues versus Pivots</h4>
+
+\[\text { product of pivots }=\text { determinant }=\text { product of eigenvalues. }\]
+
+<p>For symmetric matrices, <strong>(same signs)</strong> the number of positive <strong>eigenvalues</strong> of $S=S^{\mathrm{T}}$ equals the number of positive <strong>pivots</strong>.</p>
+
+<p>All Symmetric Matrices are Diagonalizable.</p>
+
+<h4 id="schurs-theorem-triangularization">Schur’s Theorem (triangularization)</h4>
+
+<p>Every square $A$ factors into $Q T Q^{-1}$ where $T$ is upper triangular and $\bar{Q}^{\mathrm{T}}=Q^{-1}$. If $A$ has real eigenvalues then $Q$ and $T$ can be chosen real: $Q^{\mathrm{T}} Q=I$.</p>
+
+<p>If $A=S$ then $T=\Lambda$.</p>
+
+<h1 id="positive-definite-matrices">Positive Definite Matrices</h1>
+
+<p>the <strong>symmetric</strong> matrices that have <strong>positive eigenvalues</strong></p>
+
+<p>The eigenvalues of $S$ are positive if and only if the pivots are positive</p>
+
+<h4 id="energy-based-definition">Energy-based Definition</h4>
+
+\[\text{energy}=\boldsymbol{x}^{\mathrm{T}} S \boldsymbol{x}=\lambda \boldsymbol{x}^{\mathrm{T}} \boldsymbol{x}=\lambda \|\boldsymbol{x}\|^{2}&gt;0\]
+
+<p>for all nonzero vectors $x$</p>
+
+<p>If $S$ and $T$ are symmetric positive definite, so is $S + T$.</p>
+
+<p>If the columns of $A$ are independent, then $S=A^{\mathrm{T}} A$ is positive definite.</p>
+
+<h5 id="properties">Properties</h5>
+
+<p>When a symmetric matrix $S$ has one of these five properties, it has them all:</p>
+<ol>
+  <li>All $n$ pivots of $S$ are positive.</li>
+  <li>All n upper left determinants are positive.</li>
+  <li>All n eigenvalues of $S$ are positive.</li>
+  <li>$\boldsymbol{x}^{\mathrm{T}} S \boldsymbol{x}$ is positive except at $\boldsymbol{x}=\mathbf{0}$. This is the energy-based definition.</li>
+  <li>$S$ equals $A^{\mathrm{T}} A$ for a matrix $A$ with independent columns.</li>
+</ol>
+
+<h4 id="split-up-boldsymbolxmathrmt-s-boldsymbolx">split up $\boldsymbol{x}^{\mathrm{T}} S \boldsymbol{x}$</h4>
+
+<p><img src="https://live.staticflickr.com/65535/52207679547_04975b2992_o.png" alt="Screen Shot 2022-07-11 at 12.52.10 PM" /></p>
+
+<h4 id="positive-semidefinite-matrices">Positive Semidefinite Matrices</h4>
+
+<p>dependent columns</p>
+
+<h4 id="the-ellipse-boldsymbolxmathrmt-s-boldsymbolxa-x22-b-x-yc-y21">The Ellipse $\boldsymbol{x}^{\mathrm{T}} S \boldsymbol{x}=a x^{2}+2 b x y+c y^{2}=1$</h4>
+
+<p><img src="https://live.staticflickr.com/65535/52208725083_985dae2191_o.png" alt="Screen Shot 2022-07-11 at 1.02.19 PM" /></p>
+
+<ol>
+  <li>The tilted ellipse is associated with $S$. Its equation is $\boldsymbol{x}^{\mathrm{T}} S \boldsymbol{x}=1$.</li>
+  <li>The lined-up ellipse is associated with $\Lambda$. Its equation is $\boldsymbol{X}^{\mathrm{T}} \Lambda \boldsymbol{X}=1$.</li>
+  <li>The rotation matrix that lines up the ellipse is the eigenvector matrix $Q$.</li>
+</ol>
+
+<p>$\boldsymbol{S}=Q \Lambda Q^{\mathrm{T}}$ is positive definite when all $\lambda_{i}&gt;0$. The graph of $\boldsymbol{x}^{\mathrm{T}} S \boldsymbol{x}=1$ is an ellipse:</p>
+
+<h4 id="ellipse">Ellipse</h4>
+
+\[\left[\begin{array}{ll}x &amp; y\end{array}\right] Q \Lambda Q^{\mathrm{T}}\left[\begin{array}{l}x \\ y\end{array}\right]=\left[\begin{array}{ll}X &amp; Y\end{array}\right] \Lambda\left[\begin{array}{l}X \\ Y\end{array}\right]=\boldsymbol{\lambda}_{1} \boldsymbol{X}^{2}+\boldsymbol{\lambda}_{2} Y^{2}=\mathbf{1}\]
+
+<p>The axes point along eigenvectors of $S$. The half-lengths are $1 / \sqrt{\lambda_{1}}$ and $1 / \sqrt{\lambda_{2}}$.</p>
+
+<h4 id="hyperbola">Hyperbola</h4>
+
+<p>one eigen value is negative</p>
+
+<h4 id="ellipsoid">Ellipsoid</h4>
+
+<p>$S$ is $n$ by $n$.</p>
+
+<h4 id="minimum">Minimum</h4>
+
+<p><img src="https://live.staticflickr.com/65535/52208999609_c100c7fffc_o.png" alt="Screen Shot 2022-07-11 at 1.20.51 PM" /></p>
+:ET
