@@ -15,7 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Yaoxin's Notes
 description: 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/math"
+url: "https://yxzhanggg.github.io"
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
