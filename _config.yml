@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Yaoxin's Notes
 description: 
-baseurl: "/math"
+baseurl: "/mathblog/"
 url: "https://yxzhanggg.github.io"
 
 permalink: pretty
