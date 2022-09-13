@@ -3,6 +3,7 @@ layout: default
 title: Logic
 parent: Fundamentals
 nav_order: 1
+permalink: /docs/Fundamentals/Logic/
 ---
 
 Reference:
