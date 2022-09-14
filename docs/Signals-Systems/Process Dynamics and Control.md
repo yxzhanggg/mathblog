@@ -5,4 +5,4 @@ parent: Signals and Systems
 nav_order: 3
 ---
 
- {% pdf "pdc.pdf" %}
+ {% pdf "/doc/Signals-Systems/pdc.pdf" %}
