@@ -145,7 +145,7 @@ Choose $\boldsymbol{u}=e^{\lambda t} \boldsymbol{x}$ when $\boldsymbol{A x}=\bol
 
 $$\frac{d u}{d t}=A \boldsymbol{u}=A e^{\lambda t} \boldsymbol{x}=\lambda e^{\lambda t} \boldsymbol{x}$$
 
-1. Write $\boldsymbol{u}(0)$ as a combination $c_{1} \boldsymbol{x}_{1}+\cdots+c_{n} \boldsymbol{x}_{n}$ of the eigenvectors of $\boldsymbol{A}$.
+1. Write $\boldsymbol{u}(0)$ as a combination $c_1 \boldsymbol{x}_1+\cdots+c_n \boldsymbol{x}_n$ of the eigenvectors of $\boldsymbol{A}$.
 2. Multiply each eigenvector $x_{i}$ by its **growth factor** $e^{\lambda_{i} t}$.
 3. The solution is the same combination of those pure solutions $e^{\lambda t} \boldsymbol{x}$ :
 
